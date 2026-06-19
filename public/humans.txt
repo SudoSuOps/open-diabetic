@@ -1,5 +1,5 @@
-OpenDiabetic
+OpenDiabetic Foundation
 Site: https://opendiabetic.com
-Contact: build@opendiabetic.com
+Contact: hello@opendiabetic.com
 X: https://x.com/opendiabetics
-Purpose: privacy-first diabetic compute, records, reminders, local support, research tools, developer infrastructure, and personal health vaults.
+Purpose: privacy-first compute for diabetic life; local data ownership, trusted compute, DiabeticOS, DiabeticMOS, LocalDiabetic, care packs, developer tools, and research infrastructure.

@@ -2,7 +2,7 @@
 
 OpenDiabetic Foundation is a privacy-first diabetic compute foundation focused on local ownership, diabetic records, reminders, vetted local resources, research workloads, developer tooling, and future edge/NAS-based personal health vaults. It does not harvest diabetic data.
 
-Contact: `build@opendiabetic.com`  
+Contact: `hello@opendiabetic.com`  
 X: https://x.com/opendiabetics
 
 This repo contains the first public landing page for OpenDiabetic.com. It is intentionally static: no backend, no login, no patient data collection, no diagnosis, and no fake form submission.
@@ -67,19 +67,11 @@ The site includes an end-to-end static SEO/GEO foundation:
 
 OpenDiabetic content should be indexed as a public mission and product site, but the site explicitly states that OpenDiabetic does not provide medical advice, diagnosis, treatment, medication guidance, or emergency care.
 
-## Contact Form Email Setup
+## Contact Model
 
-The contact form posts to a Cloudflare Pages Function at `/api/contact`. It sends the message to `build@opendiabetic.com`, sets the visitor's email as `Reply-To`, and sends a confirmation email back to the visitor.
+The current public homepage uses direct `mailto:` links to `hello@opendiabetic.com`. There is no active contact form backend, no login, no database, and no patient data collection path.
 
-Configure these Cloudflare Pages environment variables:
-
-```text
-RESEND_API_KEY=your_resend_api_key
-CONTACT_FROM_EMAIL=OpenDiabetic <build@opendiabetic.com>
-CONTACT_TO_EMAIL=build@opendiabetic.com
-```
-
-`CONTACT_FROM_EMAIL` defaults to `OpenDiabetic <build@opendiabetic.com>` in code if omitted, but that sender/domain must be verified with the email provider. The form is for general interest only and warns visitors not to submit private medical details or emergency requests.
+If a form is reintroduced later, it must keep the same medical-safety posture: no emergency requests, no private medical details, no diagnosis/treatment workflow, clear consent, and minimal data collection.
 
 ## Security Headers
 
@@ -109,3 +101,20 @@ git push -u origin main
 The Kimi-generated OpenDiabetic Core Strategy package is unpacked under `docs/kimi_core_strategy/`. Selected figures are published under `public/research/`, and the public markdown strategy brief is served at `/open-diabetic-core-strategy.md`.
 
 The landing page now includes a research-backed strategy section summarizing the report into implementation priorities: structural trust moat, four-tier compute architecture, developer sustainability, privacy-preserving research, and the near-term product roadmap.
+
+## X Bio
+
+Privacy-first diabetic compute for everyday life 🐝
+Local data, trusted AI, NAS vaults, reminders, care packs & real-world support.
+
+## Future Roadmap
+
+- DiabeticOS printable toolkit
+- Care pack pilot
+- Vendor and volunteer intake forms
+- Local resource directory
+- Local vault prototype
+- Apple Watch reminder workflows
+- Developer SDK
+- Research compute credits
+- LocalDiabetic pilot node

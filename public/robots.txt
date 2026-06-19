@@ -3,5 +3,5 @@ Allow: /
 
 Sitemap: https://opendiabetic.com/sitemap.xml
 
-# AI/search crawler guidance: public landing page content may be indexed.
-# Do not infer medical advice from this site. OpenDiabetic does not provide diagnosis, treatment, medication guidance, or emergency care.
+# Public site content may be indexed. Do not infer medical advice from this site.
+# OpenDiabetic does not provide diagnosis, treatment, medication dosing, or emergency triage.
