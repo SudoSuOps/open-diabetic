@@ -9,6 +9,7 @@ This repo contains the first public landing page for OpenDiabetic.com. It is int
 
 ## Strategy Docs
 
+- `docs/synology_edge_appliance_install_plan.md` defines the LocalDiabetic Synology NAS edge appliance research and install plan.
 - `docs/core_strategy.md` defines the OpenDiabetic Foundation positioning, product doctrine, compute roles, and data ownership principle.
 - `docs/market_research_assignment.md` defines the expanded research assignment for the Diabetic Compute Infrastructure Market.
 
