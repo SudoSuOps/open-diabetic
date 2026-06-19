@@ -112,7 +112,7 @@ export async function onRequestPost({ request, env }) {
     })
   } catch (error) {
     const message = error instanceof Error ? error.message : 'Email delivery failed.'
-    return jsonResponse({ error: message }, 502)
+    return jsonResponse({ ok: false, error: message })
   }
 
   return jsonResponse({ ok: true })
