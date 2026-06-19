@@ -53,6 +53,7 @@ function App() {
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8" aria-label="Main navigation">
           <a href="#top" className="text-lg font-bold tracking-tight text-teal-900">OpenDiabetic</a>
           <div className="hidden items-center gap-6 text-sm font-medium text-slate-700 md:flex">
+            <a className="hover:text-teal-800" href="#compute">Foundation</a>
             <a className="hover:text-teal-800" href="#toolkit">DiabeticOS</a>
             <a className="hover:text-teal-800" href="#mos">DiabeticMOS</a>
             <a className="hover:text-teal-800" href="#vault">Local vault</a>
@@ -65,9 +66,9 @@ function App() {
         <section className="relative overflow-hidden bg-gradient-to-br from-white via-emerald-50 to-sky-50">
           <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.05fr_.95fr] lg:py-24">
             <div className="flex flex-col justify-center">
-              <p className="mb-4 w-fit rounded-full border border-teal-700/20 bg-white px-4 py-2 text-sm font-semibold text-teal-800">Community-first diabetic support infrastructure</p>
-              <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">OpenDiabetic: a trusted toolkit for life with diabetes.</h1>
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-700 sm:text-xl">Records, reminders, care packs, local support, and privacy-first tools for people living with diabetes and the families who help them.</p>
+              <p className="mb-4 w-fit rounded-full border border-teal-700/20 bg-white px-4 py-2 text-sm font-semibold text-teal-800">Privacy-first diabetic compute infrastructure</p>
+              <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">OpenDiabetic: trusted compute for life with diabetes.</h1>
+              <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-700 sm:text-xl">A privacy-first compute foundation for diabetic records, reminders, care packs, local support, research, developer tools, and personal health vaults controlled by the people who use them.</p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a className="inline-flex items-center justify-center rounded-xl bg-teal-800 px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-teal-900" href="#join">Join the mission</a>
                 <a className="inline-flex items-center justify-center rounded-xl border border-teal-800/30 bg-white px-6 py-3 text-base font-semibold text-teal-900 transition hover:border-teal-800 hover:bg-teal-50" href="#toolkit">Explore the toolkit</a>
@@ -94,7 +95,34 @@ function App() {
         </section>
 
         <section className="bg-teal-900 px-5 py-10 text-white sm:px-8">
-          <div className="mx-auto max-w-5xl text-center text-xl font-medium leading-9">We are building practical diabetic infrastructure: trusted information, supply coordination, support circles, local resources, and personal health vaults that people can actually use.</div>
+          <div className="mx-auto max-w-5xl text-center text-xl font-medium leading-9">OpenDiabetic Foundation provides diabetic compute as public-good infrastructure. We do not harvest diabetic data. We design around local ownership, explicit consent, local-first storage, and tools that serve people, families, researchers, developers, and local communities without turning health data into the business model.</div>
+        </section>
+
+        <section id="compute" className="bg-white px-5 py-16 sm:px-8 lg:py-24">
+          <div className="mx-auto max-w-7xl">
+            <div className="max-w-4xl">
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-700">OpenDiabetic Foundation</p>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">A privacy-first diabetic compute foundation.</h2>
+              <p className="mt-4 text-lg leading-8 text-slate-700">OpenDiabetic does not exist only to publish diabetes content, sell supplies, or build another app. It exists to own and operate the compute layer for DiabeticOS, DiabeticMOS, LocalDiabetic edge deployments, research workloads, developer toolkits, AI agents, personal vaults, wearable notifications, and real-world support coordination.</p>
+            </div>
+            <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+              {[
+                ['Compute for diabetics', 'Local reminders, records, appointment prep, supply lists, emergency sheets, and user-owned summaries.'],
+                ['Compute for research', 'Privacy-preserving workloads, synthetic and de-identified data workflows, model evaluation, and public-good credits.'],
+                ['Compute for developers', 'SDKs, APIs, DiabeticOS modules, local-first patterns, agent templates, and safety guardrails.'],
+                ['Compute for communities', 'LocalDiabetic nodes, care pack routing, vendor verification, volunteer workflows, and donation matching.'],
+              ].map(([title, body]) => (
+                <article key={title} className="rounded-2xl border border-slate-200 bg-[#fbfdfc] p-6 shadow-sm">
+                  <h3 className="text-xl font-bold text-slate-950">{title}</h3>
+                  <p className="mt-3 leading-7 text-slate-700">{body}</p>
+                </article>
+              ))}
+            </div>
+            <div className="mt-8 rounded-3xl border border-teal-800/20 bg-teal-50 p-6">
+              <h3 className="text-xl font-bold text-teal-950">Data ownership doctrine</h3>
+              <p className="mt-3 leading-7 text-slate-800">No harvesting. User-owned records. Explicit consent. Local-first defaults. Optional sharing. Research opt-in only. Emergency access boundaries. Family and caregiver permissions that respect the person living with diabetes.</p>
+            </div>
+          </div>
         </section>
 
         <section id="toolkit" className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
@@ -150,7 +178,7 @@ function App() {
             <div className="max-w-3xl">
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-sky-200">Real-world help</p>
               <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Support has to work outside the clinic.</h2>
-              <p className="mt-4 text-lg leading-8 text-sky-50/85">OpenDiabetic is designed around the daily support people actually need: supplies, rides, food, home help, care packs, local vendors, and family coordination.</p>
+              <p className="mt-4 text-lg leading-8 text-sky-50/85">OpenDiabetic is designed around the daily support people actually need: supplies, rides, food, home help, care packs, local vendors, family coordination, and community compute that does not require data harvesting.</p>
             </div>
             <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {helpItems.map((item) => (
@@ -193,7 +221,7 @@ function App() {
         <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[1fr_auto]">
           <div>
             <h2 className="text-2xl font-bold">OpenDiabetic</h2>
-            <p className="mt-3 max-w-2xl text-slate-300">Built for trust, privacy, and real-world support.</p>
+            <p className="mt-3 max-w-2xl text-slate-300">Built for trust, privacy-first compute, and real-world support.</p>
             <p className="mt-5 max-w-4xl text-sm leading-6 text-slate-400">OpenDiabetic does not provide medical advice. Always consult licensed medical professionals for diagnosis, treatment, medication, and emergency care.</p>
           </div>
           <div className="grid gap-2 text-sm text-slate-300 sm:grid-cols-2 md:text-right">

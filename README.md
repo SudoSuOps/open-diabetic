@@ -1,8 +1,13 @@
 # OpenDiabetic
 
-OpenDiabetic is a community-first diabetic support project focused on privacy, local care, real-world help, diabetic records, reminders, vetted local resources, and future edge/NAS-based personal health vaults.
+OpenDiabetic Foundation is a privacy-first diabetic compute foundation focused on local ownership, diabetic records, reminders, vetted local resources, research workloads, developer tooling, and future edge/NAS-based personal health vaults. It does not harvest diabetic data.
 
 This repo contains the first public landing page for OpenDiabetic.com. It is intentionally static: no backend, no login, no patient data collection, no diagnosis, and no fake form submission.
+
+## Strategy Docs
+
+- `docs/core_strategy.md` defines the OpenDiabetic Foundation positioning, product doctrine, compute roles, and data ownership principle.
+- `docs/market_research_assignment.md` defines the expanded research assignment for the Diabetic Compute Infrastructure Market.
 
 ## Stack
 
