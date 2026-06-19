@@ -1,0 +1,25 @@
+# OpenDiabetic
+
+OpenDiabetic is a privacy-first diabetic compute foundation for life with diabetes.
+
+Canonical site: https://opendiabetic.com
+Contact: build@opendiabetic.com
+X: https://x.com/opendiabetics
+
+## Core positioning
+
+OpenDiabetic exists to own and operate public-good diabetic compute infrastructure. It supports DiabeticOS, DiabeticMOS, LocalDiabetic edge deployments, personal health vaults, developer tooling, AI support agents, research workloads, and local support coordination.
+
+## Data ownership principle
+
+OpenDiabetic does not harvest diabetic data. The project is designed around local ownership, explicit consent, local-first storage, optional sharing, research opt-in only, and privacy-first compute. User records should live in a user-controlled vault whenever possible.
+
+## Product concepts
+
+- DiabeticOS: daily lifestyle operating system for reminders, routines, supplies, food, foot care, doctor prep, family updates, emergency sheets, recovery, local support, dignity, and reduced cognitive load.
+- DiabeticMOS: management operating system for records, reminders, support circles, care packs, vetted vendors, medical contacts, insurance documents, local resources, family updates, post-hospital recovery, volunteer support, donation workflows, and privacy permissions.
+- LocalDiabetic: local deployment layer for NAS personal vaults, optional edge appliances, Apple Watch/iPhone alerts, local-first records, family permissions, emergency access, local vendor lists, local support networks, optional cloud backup, and no data harvesting.
+
+## Medical safety
+
+OpenDiabetic does not provide medical advice, diagnosis, treatment, medication guidance, or emergency care. Users should consult licensed medical professionals for medical decisions and emergency services for urgent needs.

@@ -1,0 +1,5 @@
+OpenDiabetic
+Site: https://opendiabetic.com
+Contact: build@opendiabetic.com
+X: https://x.com/opendiabetics
+Purpose: privacy-first diabetic compute, records, reminders, local support, research tools, developer infrastructure, and personal health vaults.

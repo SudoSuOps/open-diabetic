@@ -50,6 +50,23 @@ The production build is written to `dist/`.
 11. Deploy.
 12. Add the custom domain: `opendiabetic.com`.
 
+## SEO and GEO Layer
+
+The site includes an end-to-end static SEO/GEO foundation:
+
+- Canonical metadata for `https://opendiabetic.com`
+- Open Graph and Twitter/X card metadata
+- Organization, WebSite, and FAQPage JSON-LD structured data
+- Public FAQ content for answer engines
+- `public/sitemap.xml`
+- `public/robots.txt`
+- `public/llms.txt` for AI answer engines
+- `public/ai.txt` concise AI-readable positioning summary
+- `public/humans.txt`
+- `public/og-image.svg` social preview asset
+
+OpenDiabetic content should be indexed as a public mission and product site, but the site explicitly states that OpenDiabetic does not provide medical advice, diagnosis, treatment, medication guidance, or emergency care.
+
 ## Contact Form Email Setup
 
 The contact form posts to a Cloudflare Pages Function at `/api/contact`. It sends the message to `build@opendiabetic.com`, sets the visitor's email as `Reply-To`, and sends a confirmation email back to the visitor.

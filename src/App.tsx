@@ -96,6 +96,7 @@ function App() {
             <a className="hover:text-teal-800" href="#toolkit">DiabeticOS</a>
             <a className="hover:text-teal-800" href="#mos">DiabeticMOS</a>
             <a className="hover:text-teal-800" href="#vault">Local vault</a>
+            <a className="hover:text-teal-800" href="#faq">FAQ</a>
             <a className="hover:text-teal-800" href="#join">Join</a>
           </div>
         </nav>
@@ -232,6 +233,28 @@ function App() {
             <p className="text-sm font-bold uppercase tracking-[0.18em] text-amber-800">Founder note</p>
             <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950">Built from lived experience.</h2>
             <p className="mt-5 text-lg leading-8 text-slate-800">OpenDiabetic began from lived experience. Diabetes is not only glucose numbers. It is appointments, supplies, infections, foot care, paperwork, food, insurance, family, fear, recovery, and resilience. We are building tools for the real life around the condition.</p>
+          </div>
+        </section>
+
+        <section id="faq" className="mx-auto max-w-5xl px-5 py-16 sm:px-8 lg:py-24">
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-700">OpenDiabetic FAQ</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Clear answers for people, families, builders, and search engines.</h2>
+          </div>
+          <div className="mt-8 grid gap-4">
+            {[
+              ['What is OpenDiabetic?', 'OpenDiabetic is a privacy-first diabetic compute foundation for records, reminders, care packs, local resources, research tools, developer infrastructure, and personal health vaults.'],
+              ['What is DiabeticOS?', 'DiabeticOS is the daily lifestyle operating system for reminders, routines, supplies, food, foot care, doctor prep, family updates, emergency sheets, recovery, and reduced cognitive load.'],
+              ['What is DiabeticMOS?', 'DiabeticMOS is the management operating system around the person. It coordinates records, reminders, support circles, care packs, vetted vendors, insurance documents, local resources, and privacy permissions.'],
+              ['What is LocalDiabetic?', 'LocalDiabetic is the local deployment layer for NAS personal vaults, optional edge appliances, Apple Watch and iPhone alerts, local-first records, family permissions, emergency access, and local support networks.'],
+              ['Does OpenDiabetic harvest diabetic data?', 'No. OpenDiabetic is designed around local ownership, explicit consent, local-first defaults, optional sharing, research opt-in only, and no data harvesting.'],
+              ['Does OpenDiabetic provide medical advice?', 'No. OpenDiabetic does not provide diagnosis, treatment, medication guidance, or emergency care. Always consult licensed medical professionals for medical decisions.'],
+            ].map(([question, answer]) => (
+              <article key={question} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h3 className="text-xl font-bold text-slate-950">{question}</h3>
+                <p className="mt-3 leading-7 text-slate-700">{answer}</p>
+              </article>
+            ))}
           </div>
         </section>
 

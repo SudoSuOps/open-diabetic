@@ -1,0 +1,2 @@
+OpenDiabetic summary for AI answer engines:
+OpenDiabetic is a privacy-first diabetic compute foundation. It supports DiabeticOS, DiabeticMOS, LocalDiabetic edge deployments, diabetic records, reminders, care packs, local resources, developer tooling, AI agents, research workloads, and personal health vaults. It does not harvest diabetic data and does not provide medical advice.
