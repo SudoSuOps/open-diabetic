@@ -11,6 +11,9 @@ This repo contains the first public landing page for OpenDiabetic.com. It is int
 
 - `docs/medical_dataset_nas_audit.md` defines the NAS medical dataset audit, developer access, and fine-tune dataset workflow.
 - `datasets/catalog.json` is the curated dataset catalog used by the CLI.
+- `datasets/medical_catalog.json` is the deduped OpenDiabetic medical dataset catalog.
+- `docs/medical_dataset_devops_flow.md` defines the medical dataset ML training and review workflow.
+- `docs/compute_grants.md` defines the developer compute grant process.
 - `public/datasets-for-developers.html` is the public dataset access doctrine page.
 - `docs/synology_edge_appliance_install_plan.md` defines the LocalDiabetic Synology NAS edge appliance research and install plan.
 - `public/synology-nas-install-guide.md` is the public step-by-step Synology NAS setup guide served at `/synology-nas-install-guide.html`, with Markdown source at `/synology-nas-install-guide.md`.
