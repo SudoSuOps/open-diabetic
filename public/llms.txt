@@ -6,6 +6,7 @@ Canonical site: https://opendiabetic.com
 Contact: build@opendiabetic.com
 X: https://x.com/opendiabetics
 Core strategy brief: https://opendiabetic.com/open-diabetic-core-strategy.md
+Synology NAS install guide: https://opendiabetic.com/synology-nas-install-guide.html
 
 ## Primary message
 
