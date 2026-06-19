@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="560" viewBox="0 0 720 560" role="img" aria-labelledby="title desc">
+  <title id="title">OpenDiabetic stacked logo</title>
+  <desc id="desc">Stacked OpenDiabetic bee logo with two-tone wordmark.</desc>
+  <rect width="720" height="560" rx="56" fill="#f8fbf7"/>
+  <circle cx="592" cy="96" r="92" fill="#d8f3eb"/>
+  <g transform="translate(256 70)">
+    <rect width="208" height="208" rx="56" fill="#fff3c4" stroke="#f2b632" stroke-width="10"/>
+    <text x="104" y="139" text-anchor="middle" font-family="Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif" font-size="104">🐝</text>
+  </g>
+  <text x="360" y="362" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="76" font-weight="900" letter-spacing="0">
+    <tspan fill="#073f3b">Open</tspan><tspan fill="#c47b00">Diabetic</tspan>
+  </text>
+  <text x="360" y="416" text-anchor="middle" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="700">Privacy-first compute for diabetic life</text>
+  <rect x="224" y="454" width="272" height="48" rx="24" fill="#0f766e"/>
+  <text x="360" y="486" text-anchor="middle" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">No data harvesting</text>
+</svg>

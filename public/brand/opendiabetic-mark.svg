@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">OpenDiabetic bee mark</title>
+  <desc id="desc">A warm bee emoji mark on a honey gold tile for OpenDiabetic Foundation.</desc>
+  <rect width="512" height="512" rx="116" fill="#fff3c4"/>
+  <rect x="22" y="22" width="468" height="468" rx="98" fill="none" stroke="#f2b632" stroke-width="22"/>
+  <circle cx="384" cy="116" r="70" fill="#d8f3eb"/>
+  <text x="256" y="315" text-anchor="middle" font-family="Apple Color Emoji, Segoe UI Emoji, Noto Color Emoji, sans-serif" font-size="204">🐝</text>
+</svg>

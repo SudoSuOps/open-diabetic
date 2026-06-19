@@ -118,3 +118,17 @@ Local data, trusted AI, NAS vaults, reminders, care packs & real-world support.
 - Developer SDK
 - Research compute credits
 - LocalDiabetic pilot node
+
+## Brand Assets
+
+OpenDiabetic now includes a bee-led two-tone logo system:
+
+- `public/brand/opendiabetic-mark.svg` - square bee mark for avatars, app icons, and small placements.
+- `public/brand/opendiabetic-logo-horizontal.svg` - primary logo with two-tone `OpenDiabetic` wordmark.
+- `public/brand/opendiabetic-logo-stacked.svg` - stacked logo for social cards, documents, and slides.
+- `public/favicon.svg` - browser favicon using the bee mark.
+- `public/og-image.svg` - social preview image.
+- `src/components/BrandLogo.tsx` - reusable React wordmark component used in the header and footer.
+- `public/brand/brand-guidelines.md` - color and usage notes.
+
+Brand color roles: deep teal for `Open`, honey gold for `Diabetic`, honey accent for warmth, and soft off-white backgrounds for public-good trust. The bee should be used as a warm signature, not as a medical claim or childish visual system.
