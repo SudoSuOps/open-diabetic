@@ -5,6 +5,7 @@ OpenDiabetic is a privacy-first diabetic compute foundation for life with diabet
 Canonical site: https://opendiabetic.com
 Contact: build@opendiabetic.com
 X: https://x.com/opendiabetics
+Core strategy brief: https://opendiabetic.com/open-diabetic-core-strategy.md
 
 ## Core positioning
 
@@ -23,3 +24,7 @@ OpenDiabetic does not harvest diabetic data. The project is designed around loca
 ## Medical safety
 
 OpenDiabetic does not provide medical advice, diagnosis, treatment, medication guidance, or emergency care. Users should consult licensed medical professionals for medical decisions and emergency services for urgent needs.
+
+## Research-backed strategy
+
+The OpenDiabetic Core Strategy report identifies the primary opportunity as trusted diabetic compute infrastructure: local vaults, edge inference, consent-bound cloud coordination, developer sustainability, privacy-preserving research, and lifestyle support that reduces cognitive load.

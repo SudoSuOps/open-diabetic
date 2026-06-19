@@ -48,6 +48,34 @@ const helpItems = [
   'Family coordination',
 ]
 
+
+const strategyPillars = [
+  {
+    title: 'Structural trust moat',
+    body: 'A nonprofit, open-source, local-first foundation can make data harvesting structurally incompatible with the mission.',
+  },
+  {
+    title: 'Four-tier compute architecture',
+    body: 'Phones and watches handle alerts, edge devices run local inference, NAS vaults hold records, and cloud coordination stays consent-bound.',
+  },
+  {
+    title: 'Developer sustainability fund',
+    body: 'Compute credits, infrastructure support, and fellowships can reinforce open-source diabetes builders without extracting patient data.',
+  },
+  {
+    title: 'Privacy-preserving research',
+    body: 'Federated learning, synthetic data, de-identification, and model evaluation can support research while keeping raw records local.',
+  },
+]
+
+const roadmapItems = [
+  'Publish the data ownership doctrine and nonprofit governance draft',
+  'Prototype DiabeticOS reminders, records, emergency sheets, and supply lists',
+  'Design LocalDiabetic NAS vault reference architecture',
+  'Create safe non-diagnostic agent templates and evaluation harnesses',
+  'Launch research and developer compute credit program design',
+]
+
 function App() {
   const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
   const [formMessage, setFormMessage] = useState('')
@@ -94,6 +122,7 @@ function App() {
           <div className="hidden items-center gap-6 text-sm font-medium text-slate-700 md:flex">
             <a className="hover:text-teal-800" href="#compute">Foundation</a>
             <a className="hover:text-teal-800" href="#toolkit">DiabeticOS</a>
+            <a className="hover:text-teal-800" href="#research">Research</a>
             <a className="hover:text-teal-800" href="#mos">DiabeticMOS</a>
             <a className="hover:text-teal-800" href="#vault">Local vault</a>
             <a className="hover:text-teal-800" href="#faq">FAQ</a>
@@ -161,6 +190,56 @@ function App() {
             <div className="mt-8 rounded-3xl border border-teal-800/20 bg-teal-50 p-6">
               <h3 className="text-xl font-bold text-teal-950">Data ownership doctrine</h3>
               <p className="mt-3 leading-7 text-slate-800">No harvesting. User-owned records. Explicit consent. Local-first defaults. Optional sharing. Research opt-in only. Emergency access boundaries. Family and caregiver permissions that respect the person living with diabetes.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="research" className="bg-[#f4faf7] px-5 py-16 sm:px-8 lg:py-24">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid gap-10 lg:grid-cols-[.9fr_1.1fr]">
+              <div>
+                <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-700">Kimi strategy import</p>
+                <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Research-backed build strategy for diabetic compute infrastructure.</h2>
+                <p className="mt-4 text-lg leading-8 text-slate-700">The imported OpenDiabetic Core Strategy report reinforces the foundation thesis: the opportunity is not another app, but trusted compute infrastructure for daily diabetic life, research, developers, and local support without data harvesting.</p>
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+                  <a className="inline-flex items-center justify-center rounded-xl bg-teal-800 px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-teal-900" href="/open-diabetic-core-strategy.md">Read the strategy brief</a>
+                  <a className="inline-flex items-center justify-center rounded-xl border border-teal-800/30 bg-white px-6 py-3 text-base font-semibold text-teal-900 transition hover:border-teal-800 hover:bg-teal-50" href="#join">Help build it</a>
+                </div>
+              </div>
+              <figure className="rounded-3xl border border-slate-200 bg-white p-4 shadow-sm">
+                <img className="h-auto w-full rounded-2xl" src="/research/compute-tier-comparison.png" alt="OpenDiabetic compute tier comparison across phone, edge, NAS, and cloud coordination" loading="lazy" />
+                <figcaption className="mt-3 text-sm leading-6 text-slate-600">Compute tiers: notification layer, local inference, personal vault, and consent-bound cloud coordination.</figcaption>
+              </figure>
+            </div>
+            <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+              {strategyPillars.map((pillar) => (
+                <article key={pillar.title} className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                  <h3 className="text-xl font-bold text-slate-950">{pillar.title}</h3>
+                  <p className="mt-3 leading-7 text-slate-700">{pillar.body}</p>
+                </article>
+              ))}
+            </div>
+            <div className="mt-10 grid gap-6 lg:grid-cols-3">
+              <figure className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                <img className="h-auto w-full rounded-xl" src="/research/daily-care-burden.png" alt="Research figure about daily diabetes care burden" loading="lazy" />
+                <figcaption className="mt-3 text-sm text-slate-600">Daily care burden drives the DiabeticOS focus on reduced cognitive load.</figcaption>
+              </figure>
+              <figure className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                <img className="h-auto w-full rounded-xl" src="/research/patient-privacy-attitudes.png" alt="Research figure about patient privacy attitudes" loading="lazy" />
+                <figcaption className="mt-3 text-sm text-slate-600">Patient trust and consent are core architecture requirements, not messaging details.</figcaption>
+              </figure>
+              <figure className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                <img className="h-auto w-full rounded-xl" src="/research/phr-market-growth.png" alt="Research figure about personal health record market growth" loading="lazy" />
+                <figcaption className="mt-3 text-sm text-slate-600">Personal health records need a user-controlled compute layer people can trust.</figcaption>
+              </figure>
+            </div>
+            <div className="mt-10 rounded-3xl border border-teal-800/20 bg-white p-7 shadow-sm">
+              <h3 className="text-2xl font-bold text-slate-950">Build roadmap from the strategy report</h3>
+              <ol className="mt-5 grid gap-3 text-slate-700">
+                {roadmapItems.map((item) => (
+                  <li key={item} className="rounded-xl bg-teal-50 px-4 py-3 font-medium text-teal-950">{item}</li>
+                ))}
+              </ol>
             </div>
           </div>
         </section>

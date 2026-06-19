@@ -4,3 +4,7 @@ dist
 .env.local
 .DS_Store
 *.log
+
+# Imported Kimi source binaries are kept locally; markdown/public assets are committed.
+docs/kimi_core_strategy/*.docx
+docs/kimi_core_strategy/*.png

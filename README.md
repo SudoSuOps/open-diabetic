@@ -103,3 +103,9 @@ If SSH access is configured, push with:
 git remote add origin git@github.com:SudoSuOps/open-diabetic.git
 git push -u origin main
 ```
+
+## Kimi Core Strategy Import
+
+The Kimi-generated OpenDiabetic Core Strategy package is unpacked under `docs/kimi_core_strategy/`. Selected figures are published under `public/research/`, and the public markdown strategy brief is served at `/open-diabetic-core-strategy.md`.
+
+The landing page now includes a research-backed strategy section summarizing the report into implementation priorities: structural trust moat, four-tier compute architecture, developer sustainability, privacy-preserving research, and the near-term product roadmap.
