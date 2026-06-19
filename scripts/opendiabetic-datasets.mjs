@@ -64,9 +64,8 @@ function classify(filePath, stat) {
 }
 
 function usage() {
-  console.log(`OpenDiabetic dataset CLI\n\nCommands:\n  list                              List cataloged datasets\n  show <dataset_id>                 Show catalog metadata and access notes\n  stage <dataset_id> [dest]         Create a local staging folder and access README\n  audit <path> [--out dir] [--limit n] [--hash] [--shard-size n]\n                                    Stream-scan a NAS/local dataset path and write manifest shards\n  summarize <audit_dir>             Summarize an audit output directory\n  init-nas <path>                   Create OpenDiabetic dataset intake folders on NAS\n\nExamples:\n  npm run datasets -- list\n  npm run datasets -- show mimic-iv\n  npm run datasets -- stage nhanes /mnt/swarm/opendiabetic-datasets/staged\n  npm run datasets -- audit /mnt/swarm --out /mnt/swarm/opendiabetic-dataset-audit --limit 10000\n`)
+  console.log(`OpenDiabetic dataset CLI\n\nCommands:\n  list                              List cataloged datasets\n  show <dataset_id>                 Show catalog metadata and access notes\n  stage <dataset_id> [dest]         Create a local staging folder and access README\n  audit <path> [--out dir] [--limit n] [--hash] [--shard-size n]\n                                    Stream-scan a NAS/local dataset path and write manifest shards\n  summarize <audit_dir>             Summarize an audit output directory\n  profile-records <path> [--out dir] [--limit n]\n                                    Count records in JSONL/CSV/TSV files without copying raw data\n  init-nas <path>                   Create OpenDiabetic dataset intake folders on NAS\n\nExamples:\n  npm run datasets -- list\n  npm run datasets -- show mimic-iv\n  npm run datasets -- stage nhanes /mnt/swarm/opendiabetic-datasets/staged\n  npm run datasets -- audit /mnt/swarm --out /mnt/swarm/opendiabetic-dataset-audit --limit 10000\n  npm run datasets -- profile-records /mnt/swarm/swarm-and-bee-datasets/medical --out /mnt/swarm/opendiabetic-datasets/00_AUDIT_SUMMARIES/records\n`)
 }
-
 function parseOptions(args) {
   const opts = { _: [] }
   for (let i = 0; i < args.length; i++) {
@@ -227,6 +226,96 @@ function commandAudit(root, opts) {
   console.log(JSON.stringify(summary, null, 2))
 }
 
+function countTextRecords(filePath, ext) {
+  const fd = fs.openSync(filePath, 'r')
+  let newlineCount = 0
+  let hasAnyByte = false
+  let lastByte = null
+  const buffer = Buffer.allocUnsafe(1024 * 1024)
+  try {
+    while (true) {
+      const bytesRead = fs.readSync(fd, buffer, 0, buffer.length, null)
+      if (bytesRead === 0) break
+      hasAnyByte = true
+      for (let i = 0; i < bytesRead; i++) {
+        if (buffer[i] === 10) newlineCount++
+      }
+      lastByte = buffer[bytesRead - 1]
+    }
+  } finally {
+    fs.closeSync(fd)
+  }
+  const lineCount = hasAnyByte && lastByte !== 10 ? newlineCount + 1 : newlineCount
+  if (ext === '.csv' || ext === '.tsv') return Math.max(0, lineCount - 1)
+  return lineCount
+}
+
+function commandProfileRecords(root, opts) {
+  const absRoot = path.resolve(root)
+  const out = path.resolve(opts.out || path.join(defaultAuditOut, 'record-profile'))
+  const limit = opts.limit ? Number(opts.limit) : undefined
+  const warnings = []
+  const profileExts = new Set(['.jsonl', '.ndjson', '.csv', '.tsv'])
+  ensureDir(out)
+  let scannedFiles = 0
+  let profiledFiles = 0
+  let totalRecords = 0
+  let diabetesRelevantFiles = 0
+  let reviewRequiredFiles = 0
+  const rows = []
+  const started = new Date().toISOString()
+  walk(absRoot, (filePath) => {
+    let stat
+    try { stat = fs.statSync(filePath) } catch { return }
+    scannedFiles++
+    const c = classify(filePath, stat)
+    if (!profileExts.has(c.ext)) return
+    try {
+      const records = countTextRecords(filePath, c.ext)
+      const row = {
+        path: path.relative(absRoot, filePath),
+        ext: c.ext,
+        size_bytes: stat.size,
+        records,
+        diabetes_hits: c.diabetes_hits,
+        sensitive_hits: c.sensitive_hits,
+        risk: c.risk,
+        modified_at: stat.mtime.toISOString()
+      }
+      rows.push(row)
+      profiledFiles++
+      totalRecords += records
+      if (c.diabetes_hits.length > 0) diabetesRelevantFiles++
+      if (c.risk.includes('review')) reviewRequiredFiles++
+    } catch (err) {
+      warnings.push({ path: path.relative(absRoot, filePath), warning: err.message })
+    }
+  }, { limit, warnings })
+  rows.sort((a, b) => b.records - a.records)
+  fs.writeFileSync(path.join(out, 'record-profile.jsonl'), rows.map((row) => JSON.stringify(row)).join('\n') + (rows.length ? '\n' : ''))
+  const summary = {
+    profile_id: `record-profile-${crypto.randomUUID()}`,
+    created_at: new Date().toISOString(),
+    started_at: started,
+    root: absRoot,
+    limited: Boolean(limit),
+    limit: limit || null,
+    scanned_files: scannedFiles,
+    profiled_files: profiledFiles,
+    total_records: totalRecords,
+    diabetes_relevant_files: diabetesRelevantFiles,
+    review_required_files: reviewRequiredFiles,
+    top_files_by_records: rows.slice(0, 25),
+    warnings,
+    verdict: reviewRequiredFiles > 0 ? 'REVIEW_REQUIRED' : 'PASS_WITH_LIMITATIONS',
+    doctrine: 'Record counts are metadata for local audit. They do not grant permission to share, upload, or train on any dataset.'
+  }
+  summary.summary_hash = stableHash(summary)
+  fs.writeFileSync(path.join(out, 'record-profile-summary.json'), JSON.stringify(summary, null, 2))
+  fs.writeFileSync(path.join(out, 'README.md'), '# OpenDiabetic Record Profile\n\nRoot: `' + absRoot + '`\nProfiled files: ' + profiledFiles + '\nEstimated records: ' + totalRecords + '\n\nRaw data was not copied. Review source, license, and PHI status before developer access.\n')
+  console.log(JSON.stringify(summary, null, 2))
+}
+
 function commandSummarize(dir) {
   const summaryPath = path.join(path.resolve(dir), 'audit-summary.json')
   if (!fs.existsSync(summaryPath)) throw new Error(`Missing audit-summary.json in ${dir}`)
@@ -256,6 +345,11 @@ try {
     if (!opts._[0]) throw new Error('audit requires a path')
     commandAudit(opts._[0], opts)
   } else if (command === 'summarize') commandSummarize(rest[0])
+  else if (command === 'profile-records') {
+    const opts = parseOptions(rest)
+    if (!opts._[0]) throw new Error('profile-records requires a path')
+    commandProfileRecords(opts._[0], opts)
+  }
   else if (command === 'init-nas') commandInitNas(rest[0] || '/mnt/swarm/opendiabetic-datasets')
   else throw new Error(`Unknown command: ${command}`)
 } catch (err) {
