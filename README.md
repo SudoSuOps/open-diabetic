@@ -2,6 +2,9 @@
 
 OpenDiabetic Foundation is a privacy-first diabetic compute foundation focused on local ownership, diabetic records, reminders, vetted local resources, research workloads, developer tooling, and future edge/NAS-based personal health vaults. It does not harvest diabetic data.
 
+Contact: `build@opendiabetic.com`  
+X: https://x.com/opendiabetics
+
 This repo contains the first public landing page for OpenDiabetic.com. It is intentionally static: no backend, no login, no patient data collection, no diagnosis, and no fake form submission.
 
 ## Strategy Docs

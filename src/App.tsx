@@ -202,7 +202,7 @@ function App() {
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-700">Join the mission</p>
               <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Help shape OpenDiabetic.</h2>
               <p className="mt-4 text-lg leading-8 text-slate-700">We are gathering caregivers, clinicians, donors, vendors, volunteers, builders, and people living with diabetes to build a trustworthy public resource network.</p>
-              <p className="mt-5 rounded-2xl border border-teal-800/20 bg-teal-50 p-4 text-slate-800">Form backend coming soon. For now, contact: <a className="font-semibold text-teal-900 underline underline-offset-4" href="mailto:hello@opendiabetic.com">hello@opendiabetic.com</a></p>
+              <p className="mt-5 rounded-2xl border border-teal-800/20 bg-teal-50 p-4 text-slate-800">Form backend coming soon. For now, contact: <a className="font-semibold text-teal-900 underline underline-offset-4" href="mailto:build@opendiabetic.com">build@opendiabetic.com</a> or follow <a className="font-semibold text-teal-900 underline underline-offset-4" href="https://x.com/opendiabetics" target="_blank" rel="noreferrer">@opendiabetics</a>.</p>
             </div>
             <form className="rounded-3xl border border-slate-200 bg-[#fbfdfc] p-6 shadow-sm" aria-label="Interest form placeholder">
               <div className="grid gap-5">
@@ -210,7 +210,7 @@ function App() {
                 <label className="grid gap-2 font-medium text-slate-800">Email<input className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-base" type="email" name="email" autoComplete="email" /></label>
                 <label className="grid gap-2 font-medium text-slate-800">I am a...<select className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-base" name="role" defaultValue=""><option value="" disabled>Select one</option><option>Person with diabetes</option><option>Caregiver/family</option><option>Clinician</option><option>Donor</option><option>Vendor</option><option>Volunteer</option><option>Builder</option></select></label>
                 <label className="grid gap-2 font-medium text-slate-800">Message<textarea className="min-h-32 rounded-xl border border-slate-300 bg-white px-4 py-3 text-base" name="message" /></label>
-                <a className="inline-flex items-center justify-center rounded-xl bg-teal-800 px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-teal-900" href="mailto:hello@opendiabetic.com?subject=OpenDiabetic%20interest">Email OpenDiabetic</a>
+                <a className="inline-flex items-center justify-center rounded-xl bg-teal-800 px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-teal-900" href="mailto:build@opendiabetic.com?subject=OpenDiabetic%20interest">Email OpenDiabetic</a>
               </div>
             </form>
           </div>
@@ -222,6 +222,7 @@ function App() {
           <div>
             <h2 className="text-2xl font-bold">OpenDiabetic</h2>
             <p className="mt-3 max-w-2xl text-slate-300">Built for trust, privacy-first compute, and real-world support.</p>
+            <p className="mt-3 text-sm text-slate-300">Contact <a className="font-semibold text-white underline underline-offset-4" href="mailto:build@opendiabetic.com">build@opendiabetic.com</a> · <a className="font-semibold text-white underline underline-offset-4" href="https://x.com/opendiabetics" target="_blank" rel="noreferrer">@opendiabetics on X</a></p>
             <p className="mt-5 max-w-4xl text-sm leading-6 text-slate-400">OpenDiabetic does not provide medical advice. Always consult licensed medical professionals for diagnosis, treatment, medication, and emergency care.</p>
           </div>
           <div className="grid gap-2 text-sm text-slate-300 sm:grid-cols-2 md:text-right">
