@@ -1,3 +1,4 @@
+import { ActionPaths } from './components/ActionPaths'
 import { BrandLogo } from './components/BrandLogo'
 import { CarePacks } from './components/CarePacks'
 import { ComputeLayer } from './components/ComputeLayer'
@@ -25,6 +26,7 @@ function App() {
             <BrandLogo textClassName="text-lg sm:text-xl" markClassName="h-10 w-10 text-xl" />
           </a>
           <div className="hidden items-center gap-5 text-sm font-bold text-slate-700 lg:flex">
+            <a className="hover:text-[#0f766e]" href="#action-paths">Start here</a>
             <a className="hover:text-[#0f766e]" href="#hard-facts">Hard facts</a>
             <a className="hover:text-[#0f766e]" href="#doctrine">Doctrine</a>
             <a className="hover:text-[#0f766e]" href="#compute">Compute</a>
@@ -34,9 +36,19 @@ function App() {
             <a className="hover:text-[#0f766e]" href="#join">Join</a>
           </div>
         </nav>
+        <div className="border-t border-teal-950/10 px-5 py-3 lg:hidden" aria-label="Quick navigation">
+          <div className="mx-auto flex max-w-7xl gap-2 overflow-x-auto text-sm font-black text-slate-700">
+            <a className="shrink-0 rounded-full bg-[#eef8f3] px-4 py-2" href="#action-paths">Start</a>
+            <a className="shrink-0 rounded-full bg-[#eef8f3] px-4 py-2" href="#hard-facts">Facts</a>
+            <a className="shrink-0 rounded-full bg-[#eef8f3] px-4 py-2" href="#doctrine">Trust</a>
+            <a className="shrink-0 rounded-full bg-[#eef8f3] px-4 py-2" href="#diabetic-os">DiabeticOS</a>
+            <a className="shrink-0 rounded-full bg-[#eef8f3] px-4 py-2" href="#join">Join</a>
+          </div>
+        </div>
       </header>
       <main id="main-content">
         <Hero />
+        <ActionPaths />
         <Problem />
         <HardFacts />
         <TrustDoctrine />

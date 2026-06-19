@@ -153,3 +153,9 @@ OpenDiabetic now includes a bee-led two-tone logo system:
 - `public/brand/brand-guidelines.md` - color and usage notes.
 
 Brand color roles: deep teal for `Open`, honey gold for `Diabetic`, honey accent for warmth, and soft off-white backgrounds for public-good trust. The bee should be used as a warm signature, not as a medical claim or childish visual system.
+
+
+## Site audit baseline
+
+The current end-to-end site audit is documented in [docs/site_audit_20260619.md](docs/site_audit_20260619.md). It covers common-sense utility, mobile usability, human-in-the-loop guardrails, privacy posture, medical-safety boundaries, infrastructure readiness, and the next build priorities.
+
