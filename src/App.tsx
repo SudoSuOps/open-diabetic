@@ -1,0 +1,211 @@
+const toolkitItems = [
+  'Daily reminders',
+  'Medication and supply tracking',
+  'Food and recipe library',
+  'Foot-care and wound-care notes',
+  'Doctor and insurance records',
+  'Emergency contact sheet',
+  'Family and support-circle coordination',
+  'Future wearable notifications',
+]
+
+const mosCards = [
+  {
+    title: 'Records Vault',
+    body: 'Keep insurance details, medical records, device notes, contacts, recipes, and care notes organized in one place.',
+  },
+  {
+    title: 'Reminder Engine',
+    body: 'Plan medication, supplies, appointments, daily routines, foot checks, and family follow-up reminders.',
+  },
+  {
+    title: 'Care Pack Builder',
+    body: 'Coordinate practical support packs for daily life, recovery, travel, weather, and emergency gaps.',
+  },
+  {
+    title: 'Local Vendor Directory',
+    body: 'Map vetted suppliers, cleaners, shoppers, transportation help, and community resources by location.',
+  },
+  {
+    title: 'Support Circle',
+    body: 'Help trusted family, caregivers, and friends understand what is needed and when to step in.',
+  },
+  {
+    title: 'Privacy-first AI Assistant',
+    body: 'Use assistive agents for organization, checklists, summaries, and reminders without replacing clinicians.',
+  },
+]
+
+const helpItems = [
+  'Donation-supported care packs',
+  'Vetted local vendors',
+  'Cleaners and home support',
+  'Medical suppliers',
+  'Shoppers and errand help',
+  'Transportation and community support',
+  'Family coordination',
+]
+
+function App() {
+  return (
+    <div className="min-h-screen bg-[#f8fbf9] text-slate-900">
+      <header className="border-b border-teal-900/10 bg-white/90 backdrop-blur">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8" aria-label="Main navigation">
+          <a href="#top" className="text-lg font-bold tracking-tight text-teal-900">OpenDiabetic</a>
+          <div className="hidden items-center gap-6 text-sm font-medium text-slate-700 md:flex">
+            <a className="hover:text-teal-800" href="#toolkit">DiabeticOS</a>
+            <a className="hover:text-teal-800" href="#mos">DiabeticMOS</a>
+            <a className="hover:text-teal-800" href="#vault">Local vault</a>
+            <a className="hover:text-teal-800" href="#join">Join</a>
+          </div>
+        </nav>
+      </header>
+
+      <main id="top">
+        <section className="relative overflow-hidden bg-gradient-to-br from-white via-emerald-50 to-sky-50">
+          <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 lg:grid-cols-[1.05fr_.95fr] lg:py-24">
+            <div className="flex flex-col justify-center">
+              <p className="mb-4 w-fit rounded-full border border-teal-700/20 bg-white px-4 py-2 text-sm font-semibold text-teal-800">Community-first diabetic support infrastructure</p>
+              <h1 className="max-w-4xl text-4xl font-bold leading-tight tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">OpenDiabetic: a trusted toolkit for life with diabetes.</h1>
+              <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-700 sm:text-xl">Records, reminders, care packs, local support, and privacy-first tools for people living with diabetes and the families who help them.</p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <a className="inline-flex items-center justify-center rounded-xl bg-teal-800 px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-teal-900" href="#join">Join the mission</a>
+                <a className="inline-flex items-center justify-center rounded-xl border border-teal-800/30 bg-white px-6 py-3 text-base font-semibold text-teal-900 transition hover:border-teal-800 hover:bg-teal-50" href="#toolkit">Explore the toolkit</a>
+              </div>
+            </div>
+            <div className="rounded-[2rem] border border-teal-900/10 bg-white p-5 shadow-xl shadow-teal-900/5">
+              <div className="rounded-[1.5rem] bg-slate-950 p-5 text-white">
+                <div className="mb-6 flex items-center justify-between border-b border-white/10 pb-4">
+                  <span className="text-sm font-semibold text-emerald-200">DiabeticMOS Preview</span>
+                  <span className="rounded-full bg-emerald-400/15 px-3 py-1 text-xs text-emerald-100">local-first</span>
+                </div>
+                <div className="grid gap-3">
+                  {['Medication reminder', 'Supply inventory', 'Insurance card', 'Foot-care note', 'Emergency contact'].map((item, index) => (
+                    <div key={item} className="flex items-center justify-between rounded-xl border border-white/10 bg-white/5 p-4">
+                      <span>{item}</span>
+                      <span className="text-sm text-sky-200">{index < 2 ? 'today' : 'saved'}</span>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-5 text-sm leading-6 text-slate-300">Wearables and phones become the notification layer. The private vault remains organized under the user’s control.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-teal-900 px-5 py-10 text-white sm:px-8">
+          <div className="mx-auto max-w-5xl text-center text-xl font-medium leading-9">We are building practical diabetic infrastructure: trusted information, supply coordination, support circles, local resources, and personal health vaults that people can actually use.</div>
+        </section>
+
+        <section id="toolkit" className="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:py-24">
+          <div className="max-w-3xl">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-700">DiabeticOS</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">A personal diabetic toolkit for daily life.</h2>
+            <p className="mt-4 text-lg leading-8 text-slate-700">DiabeticOS is the practical layer for people and families: reminders, records, care notes, recipes, supplies, and trusted coordination without pretending an app can replace medical care.</p>
+          </div>
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {toolkitItems.map((item) => (
+              <div key={item} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+                <div className="mb-4 h-2 w-12 rounded-full bg-gradient-to-r from-teal-700 to-sky-500" aria-hidden="true" />
+                <h3 className="text-lg font-semibold text-slate-950">{item}</h3>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="mos" className="bg-white px-5 py-16 sm:px-8 lg:py-24">
+          <div className="mx-auto max-w-7xl">
+            <div className="max-w-3xl">
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-700">DiabeticMOS</p>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">The management operating system for diabetic care coordination.</h2>
+            </div>
+            <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+              {mosCards.map((card) => (
+                <article key={card.title} className="rounded-2xl border border-slate-200 bg-[#fbfdfc] p-6 shadow-sm">
+                  <h3 className="text-xl font-bold text-slate-950">{card.title}</h3>
+                  <p className="mt-3 leading-7 text-slate-700">{card.body}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="vault" className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 lg:grid-cols-[.9fr_1.1fr] lg:py-24">
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-700">Local-first vault</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">A NAS and edge appliance vision for personal health organization.</h2>
+          </div>
+          <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-sm">
+            <p className="text-lg leading-8 text-slate-700">Your most important diabetic records should not be scattered across portals, emails, paper folders, and apps. OpenDiabetic is exploring a local-first vault where your records, reminders, recipes, contacts, and care notes stay organized under your control.</p>
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {['Insurance info', 'Medical records', 'Wound-care notes', 'Cookbooks', 'Doctor contacts', 'Emergency contacts', 'Device logs', 'Reminders'].map((item) => (
+                <div key={item} className="rounded-xl bg-emerald-50 px-4 py-3 font-medium text-teal-950">{item}</div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-sky-950 px-5 py-16 text-white sm:px-8 lg:py-24">
+          <div className="mx-auto max-w-7xl">
+            <div className="max-w-3xl">
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-sky-200">Real-world help</p>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">Support has to work outside the clinic.</h2>
+              <p className="mt-4 text-lg leading-8 text-sky-50/85">OpenDiabetic is designed around the daily support people actually need: supplies, rides, food, home help, care packs, local vendors, and family coordination.</p>
+            </div>
+            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {helpItems.map((item) => (
+                <div key={item} className="rounded-2xl border border-white/15 bg-white/8 p-5 text-lg font-semibold">{item}</div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="mx-auto max-w-5xl px-5 py-16 sm:px-8 lg:py-24">
+          <div className="rounded-3xl border border-amber-200 bg-amber-50 p-7 sm:p-10">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-amber-800">Founder note</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950">Built from lived experience.</h2>
+            <p className="mt-5 text-lg leading-8 text-slate-800">OpenDiabetic began from lived experience. Diabetes is not only glucose numbers. It is appointments, supplies, infections, foot care, paperwork, food, insurance, family, fear, recovery, and resilience. We are building tools for the real life around the condition.</p>
+          </div>
+        </section>
+
+        <section id="join" className="bg-white px-5 py-16 sm:px-8 lg:py-24">
+          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.85fr_1.15fr]">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-700">Join the mission</p>
+              <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Help shape OpenDiabetic.</h2>
+              <p className="mt-4 text-lg leading-8 text-slate-700">We are gathering caregivers, clinicians, donors, vendors, volunteers, builders, and people living with diabetes to build a trustworthy public resource network.</p>
+              <p className="mt-5 rounded-2xl border border-teal-800/20 bg-teal-50 p-4 text-slate-800">Form backend coming soon. For now, contact: <a className="font-semibold text-teal-900 underline underline-offset-4" href="mailto:hello@opendiabetic.com">hello@opendiabetic.com</a></p>
+            </div>
+            <form className="rounded-3xl border border-slate-200 bg-[#fbfdfc] p-6 shadow-sm" aria-label="Interest form placeholder">
+              <div className="grid gap-5">
+                <label className="grid gap-2 font-medium text-slate-800">Name<input className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-base" type="text" name="name" autoComplete="name" /></label>
+                <label className="grid gap-2 font-medium text-slate-800">Email<input className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-base" type="email" name="email" autoComplete="email" /></label>
+                <label className="grid gap-2 font-medium text-slate-800">I am a...<select className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-base" name="role" defaultValue=""><option value="" disabled>Select one</option><option>Person with diabetes</option><option>Caregiver/family</option><option>Clinician</option><option>Donor</option><option>Vendor</option><option>Volunteer</option><option>Builder</option></select></label>
+                <label className="grid gap-2 font-medium text-slate-800">Message<textarea className="min-h-32 rounded-xl border border-slate-300 bg-white px-4 py-3 text-base" name="message" /></label>
+                <a className="inline-flex items-center justify-center rounded-xl bg-teal-800 px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-teal-900" href="mailto:hello@opendiabetic.com?subject=OpenDiabetic%20interest">Email OpenDiabetic</a>
+              </div>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer className="border-t border-slate-200 bg-slate-950 px-5 py-10 text-white sm:px-8">
+        <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-[1fr_auto]">
+          <div>
+            <h2 className="text-2xl font-bold">OpenDiabetic</h2>
+            <p className="mt-3 max-w-2xl text-slate-300">Built for trust, privacy, and real-world support.</p>
+            <p className="mt-5 max-w-4xl text-sm leading-6 text-slate-400">OpenDiabetic does not provide medical advice. Always consult licensed medical professionals for diagnosis, treatment, medication, and emergency care.</p>
+          </div>
+          <div className="grid gap-2 text-sm text-slate-300 sm:grid-cols-2 md:text-right">
+            <span>OpenDiabetic</span>
+            <span>DiabeticOS</span>
+            <span>DiabeticMOS</span>
+            <span>LocalDiabetic</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
+
+export default App
