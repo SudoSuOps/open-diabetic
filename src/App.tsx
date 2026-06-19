@@ -16,6 +16,7 @@ import { TrustDoctrine } from './components/TrustDoctrine'
 function App() {
   return (
     <div className="min-h-screen bg-[#f8fbf7] text-slate-950">
+      <a className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-xl focus:bg-[#f2b632] focus:px-4 focus:py-3 focus:font-black focus:text-[#073f3b]" href="#main-content">Skip to main content</a>
       <header className="sticky top-0 z-40 border-b border-teal-950/10 bg-white/90 backdrop-blur-md">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8" aria-label="Main navigation">
           <a href="#top" className="flex items-center gap-3 text-lg font-black tracking-tight text-[#073f3b]" aria-label="OpenDiabetic home">
@@ -32,7 +33,7 @@ function App() {
           </div>
         </nav>
       </header>
-      <main>
+      <main id="main-content">
         <Hero />
         <Problem />
         <TrustDoctrine />
