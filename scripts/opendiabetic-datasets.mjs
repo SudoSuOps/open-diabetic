@@ -172,7 +172,7 @@ function commandAudit(root, opts) {
   }
 
   const started = new Date().toISOString()
-  walk(absRoot, (filePath) => {
+  const scannedFiles = walk(absRoot, (filePath) => {
     let stat
     try { stat = fs.statSync(filePath) } catch { return }
     const c = classify(filePath, stat)
@@ -211,6 +211,7 @@ function commandAudit(root, opts) {
     limit: limit || null,
     shard_size: shardSize,
     manifest_shards: shardIndex,
+    scanned_files: scannedFiles,
     matched_files: total,
     dataset_like_files: datasetLike,
     diabetes_relevant_files: diabetesRelevant,
