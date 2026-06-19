@@ -3,7 +3,7 @@
 Scope: mounted Synology/NFS root `/mnt/swarm` plus targeted record profiles for trustcat/minechain/swarm-and-bee related roots  
 Detected NAS mount: `192.168.0.102:/volume1/swarm` -> `/mnt/swarm`  
 Remote worker requested: `swarm@192.168.0.100`  
-Remote status: SSH blocked by authentication (`Permission denied (publickey,password)`)  
+Remote status: SSH authenticated with user-provided password and audited read-only  
 Mode: metadata and record-count audit; raw data not copied  
 Verdict: `REVIEW_REQUIRED`
 
@@ -103,7 +103,10 @@ Output: `/mnt/swarm/opendiabetic-datasets/00_AUDIT_SUMMARIES/records-defendable-
 | `/mnt/swarm/swarm-and-bee-datasets/medical` | 791,807 |
 | `/mnt/swarm/swarm-and-bee-datasets/datasets` | 362,100 |
 | `/mnt/swarm/defendable-datasets/datasets` | 11 |
-| **Confirmed total** | **1,153,918** |
+| **Confirmed local Synology total** | **1,153,918** |
+| Remote dedicated medical corpus | 420,963 |
+| Remote `/data1` JSONL corpus | 733,298 |
+| Remote `/data2` JSONL corpus | 12,716,736 |
 
 A direct `wc -l` on the primary medical/swarm JSONL files also confirmed `985,582` records across the first seven high-value JSONL files plus two sample files. The CLI profile is broader because it includes receipt JSONL files under the datasets tree.
 
@@ -116,24 +119,59 @@ A direct `wc -l` on the primary medical/swarm JSONL files also confirmed `985,58
 
 ## Interpretation
 
-The NAS does contain far more than 400,000 records/examples in the called-out dataset roots. The high-value local dataset mass is concentrated in large JSONL files, not in hundreds of thousands of individual files.
+The NAS and remote worker contain far more than 400,000 records/examples in the called-out dataset roots. The dedicated medical roots alone exceed 1.5 million records before deduplication: 1,153,918 local Synology/swarm records plus 420,963 remote medical records. The high-value local dataset mass is concentrated in large JSONL files, not in hundreds of thousands of individual files.
 
 The audit remains `REVIEW_REQUIRED` because record counts do not establish source rights, PHI/PII status, license, de-identification sufficiency, or model-training permission.
 
-## Remote Worker Gap
+## Remote Worker Audit: swarm@192.168.0.100
 
-The requested host `swarm@192.168.0.100` could not be audited from this session because SSH authentication failed. Required next action:
+Host: `swarmrails`  
+Remote Synology mount: `192.168.0.102:/volume1/swarm` -> `/mnt/swarm`  
+Additional local volumes: `/data1`, `/data2`
 
-```bash
-ssh-copy-id swarm@192.168.0.100
-# or provide the password/key and rerun the remote dataset discovery command
-```
+### Remote Root Counts
 
-Once access works, run:
+| Root | Files | JSONL/NDJSON files | CSV/TSV files | Notes |
+|---|---:|---:|---:|---|
+| `/mnt/trustcat` | 0 | 0 | 0 | mounted/created but empty |
+| `/mnt/nas/trustcat` | 0 | 0 | 0 | mounted/created but empty |
+| `/mnt/minechain` | 0 | 0 | 0 | mounted/created but empty |
+| `/home/swarm/google-gemma-4-FTW/domains/medical` | 14 | 7 | 0 | medical fine-tune/eval root |
+| `/data1` | 629 | 33 | 0 | general Atlas/local datasets |
+| `/data2` | 46,586 | 676 | 36 | large general and medical corpora |
 
-```bash
-ssh swarm@192.168.0.100 'find /mnt /home/swarm -maxdepth 4 -type d \( -iname "*trustcat*" -o -iname "*minechain*" -o -iname "*swarm*bee*" -o -iname "*medical*" -o -iname "*dataset*" -o -iname "*datasets*" \) 2>/dev/null | sort'
-```
+### Remote Medical Records
+
+Root: `/home/swarm/google-gemma-4-FTW/domains/medical`
+
+| File | Records |
+|---|---:|
+| `tribunal_ready/medical_tribunal_ready.jsonl` | 417,136 |
+| `deeds/medical_deeds_written.jsonl` | 1,469 |
+| `deeds/deed_pairs.jsonl` | 1,469 |
+| `deeds/deed_pairs_31b_full.jsonl` | 397 |
+| `deeds/deeds_31b_full.jsonl` | 392 |
+| test/eval deed files | 100 |
+| **Total** | **420,963** |
+
+### Remote Large Corpus Counts
+
+| Root | JSONL/NDJSON records | Notes |
+|---|---:|---|
+| `/data1` | 733,298 | mostly Atlas training/eval data |
+| `/data2` | 12,716,736 | large general corpora; includes swarm-honey medical duplicates |
+
+Top relevant `/data2` medical/swarm files include:
+
+| File | Records |
+|---|---:|
+| `/data2/datasets/swarm-honey/medical/MASTER_PLATINUM.jsonl` | 406,181 |
+| `/data2/datasets/swarm-honey/medical/MASTER_GOLD.jsonl` | 385,626 |
+
+### Remote Interpretation
+
+The remote worker confirms an additional dedicated medical corpus of **420,963** records and large local general corpora on `/data1` and `/data2`. The `/data2` total includes duplicated/parallel copies of the swarm-honey medical files already observed on the Synology mount, so totals must be deduplicated by file hash before claiming unique training examples.
+
 
 ## Required Follow-Up
 
