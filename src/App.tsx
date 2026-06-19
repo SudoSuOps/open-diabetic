@@ -7,6 +7,7 @@ import { DiabeticOS } from './components/DiabeticOS'
 import { Footer } from './components/Footer'
 import { FoundationModel } from './components/FoundationModel'
 import { FounderNote } from './components/FounderNote'
+import { HardFacts } from './components/HardFacts'
 import { Hero } from './components/Hero'
 import { LocalVault } from './components/LocalVault'
 import { Problem } from './components/Problem'
@@ -24,6 +25,7 @@ function App() {
             <BrandLogo textClassName="text-lg sm:text-xl" markClassName="h-10 w-10 text-xl" />
           </a>
           <div className="hidden items-center gap-5 text-sm font-bold text-slate-700 lg:flex">
+            <a className="hover:text-[#0f766e]" href="#hard-facts">Hard facts</a>
             <a className="hover:text-[#0f766e]" href="#doctrine">Doctrine</a>
             <a className="hover:text-[#0f766e]" href="#compute">Compute</a>
             <a className="hover:text-[#0f766e]" href="#diabetic-os">DiabeticOS</a>
@@ -36,6 +38,7 @@ function App() {
       <main id="main-content">
         <Hero />
         <Problem />
+        <HardFacts />
         <TrustDoctrine />
         <ComputeLayer />
         <DiabeticOS />

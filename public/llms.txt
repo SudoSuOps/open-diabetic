@@ -8,6 +8,7 @@ X: https://x.com/opendiabetics
 Core strategy brief: https://opendiabetic.com/open-diabetic-core-strategy.md
 Synology NAS install guide: https://opendiabetic.com/synology-nas-install-guide.html
 Dataset developer guide: https://opendiabetic.com/datasets-for-developers.html
+Hard facts page: https://opendiabetic.com/hard-facts-diabetes.html
 
 ## Primary message
 
@@ -15,7 +16,7 @@ Privacy-first compute for diabetic life.
 
 ## Secondary message
 
-OpenDiabetic gives people living with diabetes a trusted lifestyle OS for records, reminders, care packs, local support, research, and day-to-day simplicity without harvesting their data.
+OpenDiabetic is grounded in verified diabetes facts: serious medical risk, daily 24/7 management burden, financial cost, mental stress, and the need for coordinated support. OpenDiabetic gives people living with diabetes a trusted lifestyle OS for records, reminders, care packs, local support, research, and day-to-day simplicity without harvesting their data.
 
 ## Core doctrine
 
