@@ -62,7 +62,7 @@ CONTACT_FROM_EMAIL=OpenDiabetic <build@opendiabetic.com>
 CONTACT_TO_EMAIL=build@opendiabetic.com
 ```
 
-`CONTACT_FROM_EMAIL` must use a sender/domain verified with the email provider. The form is for general interest only and warns visitors not to submit private medical details or emergency requests.
+`CONTACT_FROM_EMAIL` defaults to `OpenDiabetic <build@opendiabetic.com>` in code if omitted, but that sender/domain must be verified with the email provider. The form is for general interest only and warns visitors not to submit private medical details or emergency requests.
 
 ## Security Headers
 
