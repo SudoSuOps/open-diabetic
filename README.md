@@ -9,6 +9,9 @@ This repo contains the first public landing page for OpenDiabetic.com. It is int
 
 ## Strategy Docs
 
+- `docs/medical_dataset_nas_audit.md` defines the NAS medical dataset audit, developer access, and fine-tune dataset workflow.
+- `datasets/catalog.json` is the curated dataset catalog used by the CLI.
+- `public/datasets-for-developers.html` is the public dataset access doctrine page.
 - `docs/synology_edge_appliance_install_plan.md` defines the LocalDiabetic Synology NAS edge appliance research and install plan.
 - `public/synology-nas-install-guide.md` is the public step-by-step Synology NAS setup guide served at `/synology-nas-install-guide.html`, with Markdown source at `/synology-nas-install-guide.md`.
 - `docs/core_strategy.md` defines the OpenDiabetic Foundation positioning, product doctrine, compute roles, and data ownership principle.
@@ -21,6 +24,19 @@ This repo contains the first public landing page for OpenDiabetic.com. It is int
 - TypeScript
 - Tailwind CSS
 - Static deployment on Cloudflare Pages
+
+## Dataset CLI
+
+The dataset CLI audits local/NAS datasets without copying raw medical data into git.
+
+```bash
+npm run datasets -- list
+npm run datasets -- show nhanes
+npm run datasets -- init-nas /mnt/swarm/opendiabetic-datasets
+npm run datasets -- audit /mnt/swarm --out /mnt/swarm/opendiabetic-datasets/00_AUDIT_SUMMARIES/full-YYYYMMDD --shard-size 10000
+```
+
+Local audit and staging outputs under `data/` are ignored by git.
 
 ## Local Development
 

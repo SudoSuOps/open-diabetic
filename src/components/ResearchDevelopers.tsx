@@ -11,6 +11,7 @@ export function ResearchDevelopers() {
       <div className="mt-6 flex flex-col gap-3 sm:flex-row">
         <a className="inline-flex rounded-2xl border border-[#0f766e]/25 bg-white px-6 py-3 font-bold text-[#07554f] hover:bg-teal-50" href="/open-diabetic-core-strategy.md">Read the research strategy brief</a>
         <a className="inline-flex rounded-2xl border border-[#0f766e]/25 bg-white px-6 py-3 font-bold text-[#07554f] hover:bg-teal-50" href="/synology-nas-install-guide.html">Set up a Synology vault</a>
+              <a className="inline-flex rounded-2xl border border-[#0f766e]/25 bg-white px-6 py-3 font-bold text-[#07554f] hover:bg-teal-50" href="/datasets-for-developers.html">Datasets for developers</a>
       </div>
     </Section>
   )

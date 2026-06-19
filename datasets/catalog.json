@@ -1,0 +1,86 @@
+{
+  "catalog_version": "2026-06-19",
+  "doctrine": "local-first, no harvesting, explicit consent, no medical advice",
+  "nas_default_root": "/mnt/swarm",
+  "datasets": [
+    {
+      "id": "opendiabetic-local-nas-inventory",
+      "name": "OpenDiabetic Local NAS Medical Dataset Inventory",
+      "category": "local_nas_inventory",
+      "access_level": "local_private",
+      "default_path": "/mnt/swarm",
+      "status": "local_audit_required",
+      "description": "Local Synology/NFS medical dataset holdings. Do not redistribute raw data. Generate manifests, checksums, schema summaries, and approved developer access packs.",
+      "allowed_uses": ["local inventory", "schema audit", "PHI risk triage", "developer access planning", "dataset card generation"],
+      "blocked_uses": ["public raw-data sharing", "silent model training", "external upload without approval", "medical diagnosis claims"],
+      "privacy_risk": "high_unknown_until_audited",
+      "license_notes": "Treat every local dataset as restricted until source, license, consent, and PHI status are documented.",
+      "source_url": null
+    },
+    {
+      "id": "nhanes",
+      "name": "CDC NHANES",
+      "category": "public_health_survey",
+      "access_level": "public_with_user_agreement",
+      "status": "external_reference",
+      "description": "National Health and Nutrition Examination Survey questionnaires, datasets, and documentation including demographics, dietary, examination, laboratory, and questionnaire files.",
+      "allowed_uses": ["research", "statistics", "population health modeling", "education datasets"],
+      "blocked_uses": ["clinical diagnosis", "re-identification", "ignoring survey design/weights"],
+      "privacy_risk": "public_deidentified_but_sensitive",
+      "license_notes": "Use CDC/NCHS data user agreement and analytic guidelines. Limited-access files require separate controls.",
+      "source_url": "https://wwwn.cdc.gov/nchs/nhanes/Default.aspx"
+    },
+    {
+      "id": "brfss",
+      "name": "CDC BRFSS",
+      "category": "public_health_survey",
+      "access_level": "public",
+      "status": "external_reference",
+      "description": "Behavioral Risk Factor Surveillance System health-related telephone survey data covering risk behaviors, chronic conditions, and preventive service use.",
+      "allowed_uses": ["population health analysis", "state-level trend analysis", "lifestyle risk modeling"],
+      "blocked_uses": ["individual diagnosis", "re-identification", "unweighted inference without method review"],
+      "privacy_risk": "public_deidentified_but_sensitive",
+      "license_notes": "Use CDC documentation, questionnaires, weighting guidance, and public data-use expectations.",
+      "source_url": "https://www.cdc.gov/brfss/index.html"
+    },
+    {
+      "id": "uci-diabetes-130-us-hospitals",
+      "name": "UCI Diabetes 130-US Hospitals 1999-2008",
+      "category": "clinical_readmission",
+      "access_level": "public_cc_by_4_0",
+      "status": "external_reference",
+      "description": "UCI dataset of 101,766 hospital encounters for patients diagnosed with diabetes, used for readmission/classification research.",
+      "allowed_uses": ["benchmark modeling", "readmission risk research", "tabular ML examples"],
+      "blocked_uses": ["clinical deployment without validation", "re-identification", "medical advice generation"],
+      "privacy_risk": "sensitive_demographics_present",
+      "license_notes": "UCI lists CC BY 4.0; attribution required. Dataset page states sensitive attributes include age, gender, and race.",
+      "source_url": "https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008"
+    },
+    {
+      "id": "mimic-iv",
+      "name": "PhysioNet MIMIC-IV",
+      "category": "credentialed_ehr",
+      "access_level": "credentialed_restricted",
+      "status": "external_reference",
+      "description": "Large deidentified EHR dataset for ICU and emergency department admissions. Access requires PhysioNet credentialing and agreement.",
+      "allowed_uses": ["credentialed healthcare research", "local controlled experiments", "model evaluation under data-use terms"],
+      "blocked_uses": ["public redistribution", "sharing derivatives outside approved terms", "uncredentialed access"],
+      "privacy_risk": "high_sensitive_deidentified_ehr",
+      "license_notes": "PhysioNet states derived datasets/models should be treated as sensitive and shared under the same agreement as source data.",
+      "source_url": "https://physionet.org/content/mimiciv/"
+    },
+    {
+      "id": "opendiabetic-vault-derived",
+      "name": "OpenDiabetic Vault-Derived Local Examples",
+      "category": "user_owned_local",
+      "access_level": "private_opt_in_only",
+      "status": "future_local",
+      "description": "User-owned local records, reminders, care packs, and support workflow examples generated from a LocalDiabetic NAS vault only with explicit consent.",
+      "allowed_uses": ["personal organization", "local agent testing", "caregiver workflow examples", "synthetic/de-identified research only after review"],
+      "blocked_uses": ["default sharing", "cloud upload", "training without consent", "diagnosis or dosing"],
+      "privacy_risk": "very_high_private_health_data",
+      "license_notes": "User-owned. Research export requires explicit opt-in, de-identification plan, receipt, and revocation path.",
+      "source_url": null
+    }
+  ]
+}
