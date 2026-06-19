@@ -3,4 +3,4 @@
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()
-  Content-Security-Policy: default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-wRG1YuBijHV9Uudwww5IW7pjBItX77WmX+ZrYBTUGyY='; connect-src 'self'; font-src 'self' data:;
+  Content-Security-Policy: default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; script-src 'self' 'sha256-wWq3Iw1Afk1zsNhrV4xywCaX+00q9wq19vHzoodrdTc='; connect-src 'self'; font-src 'self' data:;

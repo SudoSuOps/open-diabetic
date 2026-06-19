@@ -3,7 +3,7 @@
 OpenDiabetic Foundation builds privacy-first compute infrastructure for diabetic life.
 
 Canonical site: https://opendiabetic.com
-Contact: hello@opendiabetic.com
+Contact: build@opendiabetic.com
 X: https://x.com/opendiabetics
 Core strategy brief: https://opendiabetic.com/open-diabetic-core-strategy.md
 

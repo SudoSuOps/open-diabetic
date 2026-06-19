@@ -1,4 +1,4 @@
-export const CONTACT_EMAIL = 'hello@opendiabetic.com'
+export const CONTACT_EMAIL = 'build@opendiabetic.com'
 export const X_URL = 'https://x.com/opendiabetics'
 
 export const doctrineCards = [
