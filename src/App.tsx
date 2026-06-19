@@ -1,3 +1,5 @@
+import { useState, type FormEvent } from 'react'
+
 const toolkitItems = [
   'Daily reminders',
   'Medication and supply tracking',
@@ -47,6 +49,43 @@ const helpItems = [
 ]
 
 function App() {
+  const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const [formMessage, setFormMessage] = useState('')
+
+  async function handleContactSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    const form = event.currentTarget
+    const formData = new FormData(form)
+    const payload = {
+      name: String(formData.get('name') || '').trim(),
+      email: String(formData.get('email') || '').trim(),
+      role: String(formData.get('role') || '').trim(),
+      message: String(formData.get('message') || '').trim(),
+      website: String(formData.get('website') || '').trim(),
+    }
+
+    setFormStatus('sending')
+    setFormMessage('Sending your message...')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+      const result = await response.json().catch(() => ({}))
+      if (!response.ok) {
+        throw new Error(result.error || 'Contact form is unavailable right now.')
+      }
+      form.reset()
+      setFormStatus('sent')
+      setFormMessage('Message sent. We also sent a confirmation email to the address you provided.')
+    } catch (error) {
+      setFormStatus('error')
+      setFormMessage(error instanceof Error ? error.message : 'Contact form is unavailable right now. Email build@opendiabetic.com directly.')
+    }
+  }
+
   return (
     <div className="min-h-screen bg-[#f8fbf9] text-slate-900">
       <header className="border-b border-teal-900/10 bg-white/90 backdrop-blur">
@@ -202,15 +241,18 @@ function App() {
               <p className="text-sm font-bold uppercase tracking-[0.18em] text-teal-700">Join the mission</p>
               <h2 className="mt-3 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl">Help shape OpenDiabetic.</h2>
               <p className="mt-4 text-lg leading-8 text-slate-700">We are gathering caregivers, clinicians, donors, vendors, volunteers, builders, and people living with diabetes to build a trustworthy public resource network.</p>
-              <p className="mt-5 rounded-2xl border border-teal-800/20 bg-teal-50 p-4 text-slate-800">Form backend coming soon. For now, contact: <a className="font-semibold text-teal-900 underline underline-offset-4" href="mailto:build@opendiabetic.com">build@opendiabetic.com</a> or follow <a className="font-semibold text-teal-900 underline underline-offset-4" href="https://x.com/opendiabetics" target="_blank" rel="noreferrer">@opendiabetics</a>.</p>
+              <p className="mt-5 rounded-2xl border border-teal-800/20 bg-teal-50 p-4 text-slate-800">Use the form for general interest only. Do not send private medical details, glucose logs, insurance numbers, medication instructions, or emergency requests. You can also email <a className="font-semibold text-teal-900 underline underline-offset-4" href="mailto:build@opendiabetic.com">build@opendiabetic.com</a> or follow <a className="font-semibold text-teal-900 underline underline-offset-4" href="https://x.com/opendiabetics" target="_blank" rel="noreferrer">@opendiabetics</a>.</p>
             </div>
-            <form className="rounded-3xl border border-slate-200 bg-[#fbfdfc] p-6 shadow-sm" aria-label="Interest form placeholder">
+            <form className="rounded-3xl border border-slate-200 bg-[#fbfdfc] p-6 shadow-sm" aria-label="OpenDiabetic interest form" onSubmit={handleContactSubmit}>
               <div className="grid gap-5">
-                <label className="grid gap-2 font-medium text-slate-800">Name<input className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-base" type="text" name="name" autoComplete="name" /></label>
-                <label className="grid gap-2 font-medium text-slate-800">Email<input className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-base" type="email" name="email" autoComplete="email" /></label>
-                <label className="grid gap-2 font-medium text-slate-800">I am a...<select className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-base" name="role" defaultValue=""><option value="" disabled>Select one</option><option>Person with diabetes</option><option>Caregiver/family</option><option>Clinician</option><option>Donor</option><option>Vendor</option><option>Volunteer</option><option>Builder</option></select></label>
-                <label className="grid gap-2 font-medium text-slate-800">Message<textarea className="min-h-32 rounded-xl border border-slate-300 bg-white px-4 py-3 text-base" name="message" /></label>
-                <a className="inline-flex items-center justify-center rounded-xl bg-teal-800 px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-teal-900" href="mailto:build@opendiabetic.com?subject=OpenDiabetic%20interest">Email OpenDiabetic</a>
+                <label className="hidden" aria-hidden="true">Website<input tabIndex={-1} autoComplete="off" name="website" /></label>
+                <label className="grid gap-2 font-medium text-slate-800">Name<input className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-base" type="text" name="name" autoComplete="name" required /></label>
+                <label className="grid gap-2 font-medium text-slate-800">Email<input className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-base" type="email" name="email" autoComplete="email" required /></label>
+                <label className="grid gap-2 font-medium text-slate-800">I am a...<select className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-base" name="role" defaultValue="" required><option value="" disabled>Select one</option><option>Person with diabetes</option><option>Caregiver/family</option><option>Clinician</option><option>Donor</option><option>Vendor</option><option>Volunteer</option><option>Builder</option></select></label>
+                <label className="grid gap-2 font-medium text-slate-800">Message<textarea className="min-h-32 rounded-xl border border-slate-300 bg-white px-4 py-3 text-base" name="message" maxLength={2000} required /></label>
+                <p className="rounded-xl border border-amber-300 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-950">This form is not for medical advice or emergencies. OpenDiabetic does not provide diagnosis, treatment, medication guidance, or emergency care.</p>
+                <button className="inline-flex items-center justify-center rounded-xl bg-teal-800 px-6 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-teal-900 disabled:cursor-not-allowed disabled:bg-slate-500" type="submit" disabled={formStatus === 'sending'}>{formStatus === 'sending' ? 'Sending...' : 'Send message'}</button>
+                {formMessage ? <p className={formStatus === 'error' ? 'rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900' : 'rounded-xl border border-teal-200 bg-teal-50 px-4 py-3 text-sm text-teal-950'} role="status">{formMessage}</p> : null}
               </div>
             </form>
           </div>

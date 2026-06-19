@@ -50,6 +50,20 @@ The production build is written to `dist/`.
 11. Deploy.
 12. Add the custom domain: `opendiabetic.com`.
 
+## Contact Form Email Setup
+
+The contact form posts to a Cloudflare Pages Function at `/api/contact`. It sends the message to `build@opendiabetic.com`, sets the visitor's email as `Reply-To`, and sends a confirmation email back to the visitor.
+
+Configure these Cloudflare Pages environment variables:
+
+```text
+RESEND_API_KEY=your_resend_api_key
+CONTACT_FROM_EMAIL=OpenDiabetic <build@opendiabetic.com>
+CONTACT_TO_EMAIL=build@opendiabetic.com
+```
+
+`CONTACT_FROM_EMAIL` must use a sender/domain verified with the email provider. The form is for general interest only and warns visitors not to submit private medical details or emergency requests.
+
 ## Security Headers
 
 Static security headers are configured in `public/_headers` for Cloudflare Pages.
