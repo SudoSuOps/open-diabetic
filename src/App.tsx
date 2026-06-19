@@ -74,7 +74,7 @@ function App() {
         body: JSON.stringify(payload),
       })
       const result = await response.json().catch(() => ({}))
-      if (!response.ok) {
+      if (!response.ok || result.ok === false) {
         throw new Error(result.error || 'Contact form is unavailable right now.')
       }
       form.reset()
