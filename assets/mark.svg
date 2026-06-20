@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="OpenDiabetic mark">
+  <title>OpenDiabetic hive bee</title>
+  <polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5" fill="#F2B441"/>
+  <rect x="14" y="17" width="20" height="17" rx="2.5" fill="#0B0F14"/>
+  <line x1="14" y1="22.5" x2="34" y2="22.5" stroke="#F2B441" stroke-width="2.6"/>
+  <line x1="14" y1="28.5" x2="34" y2="28.5" stroke="#F2B441" stroke-width="2.6"/>
+  <path d="M11 11 q-7 4 -2 12" fill="none" stroke="#3D9BE9" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M37 11 q7 4 2 12" fill="none" stroke="#3D9BE9" stroke-width="2.6" stroke-linecap="round"/>
+</svg>

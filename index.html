@@ -1,55 +1,165 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OpenDiabetic Foundation — Privacy-First Compute for Diabetic Life</title>
-    <meta name="description" content="OpenDiabetic Foundation is building DiabeticOS, a privacy-first lifestyle operating system for diabetic records, reminders, local data vaults, care packs, trusted compute, and real-world support." />
-    <meta name="keywords" content="OpenDiabetic, DiabeticOS, DiabeticMOS, diabetes support, diabetic lifestyle OS, privacy-first health data, local health vault, diabetes care packs, diabetes reminders, diabetic records, diabetes research compute, local-first health apps" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <meta name="author" content="OpenDiabetic Foundation" />
-    <meta name="theme-color" content="#0f766e" />
-    <link rel="canonical" href="https://opendiabetic.com" />
-    <meta property="og:title" content="OpenDiabetic Foundation — Privacy-First Compute for Diabetic Life" />
-    <meta property="og:description" content="DiabeticOS for records, reminders, local vaults, care packs, trusted compute, and real-world support." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://opendiabetic.com" />
-    <meta property="og:site_name" content="OpenDiabetic Foundation" />
-    <meta property="og:image" content="https://opendiabetic.com/og-image.svg" />
-    <meta property="og:image:alt" content="OpenDiabetic Foundation privacy-first compute for diabetic life" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@opendiabetics" />
-    <meta name="twitter:title" content="OpenDiabetic Foundation — Privacy-First Compute for Diabetic Life" />
-    <meta name="twitter:description" content="DiabeticOS for records, reminders, local vaults, care packs, trusted compute, and real-world support." />
-    <meta name="twitter:image" content="https://opendiabetic.com/og-image.svg" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="manifest" href="/site.webmanifest" />
-    <script type="application/ld+json">{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://opendiabetic.com/#organization",
-      "name": "OpenDiabetic Foundation",
-      "url": "https://opendiabetic.com",
-      "email": "build@opendiabetic.com",
-      "sameAs": ["https://x.com/opendiabetics"],
-      "knowsAbout": ["DiabeticOS", "DiabeticMOS", "LocalDiabetic", "diabetes support", "local-first health data", "personal health records", "NAS health vaults", "privacy-preserving compute", "edge AI", "care packs"],
-      "description": "OpenDiabetic Foundation builds privacy-first compute infrastructure for diabetic life."
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://opendiabetic.com/#website",
-      "url": "https://opendiabetic.com",
-      "name": "OpenDiabetic Foundation",
-      "publisher": { "@id": "https://opendiabetic.com/#organization" },
-      "inLanguage": "en-US"
-    }
-  ]
-}</script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenDiabetic — the hive does the work, your records stay home</title>
+<meta name="description" content="OpenDiabetic is donated compute that earns for the people it serves — a federated hive of rigs that does the heavy work so a diabetic's records never have to leave home. Free to patients, funded by a compute endowment, every dollar verifiable on a public ledger.">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<meta property="og:title" content="OpenDiabetic — the hive">
+<meta property="og:description" content="Donated compute. Tamper-evident giving. Records never leave home.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="/"><img src="assets/mark.svg" alt="" width="34" height="34"><span>Open<b>Diabetic</b></span></a>
+  <nav>
+    <a href="#how">How it works</a>
+    <a href="#model">The model</a>
+    <a href="#live">Live today</a>
+    <a href="#give">Give</a>
+    <a class="btn ghost" href="https://diabeticledger.com">Verify the ledger →</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <img class="wordmark" src="assets/wordmark.svg" alt="OpenDiabetic" height="58">
+    <h1>The hive does the work.<br><span>Your records stay home.</span></h1>
+    <p class="lede">OpenDiabetic is donated compute that earns for the people it serves — a federated
+      hive of rigs that does the heavy lifting so a diabetic's records never have to leave their own
+      home. <b>Free to the people. Funded by the compute. Every dollar on a public ledger.</b></p>
+    <div class="cta">
+      <a class="btn" href="#give">Give back</a>
+      <a class="btn ghost" href="https://diabeticledger.com">Watch every dollar →</a>
+    </div>
+    <p class="micro">Models flow down · Receipts flow up · PHI crosses never</p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap stats">
+    <div><b>38.1M</b><span>U.S. diabetics</span></div>
+    <div><b>589M</b><span>worldwide</span></div>
+    <div><b>$412.9B</b><span>U.S. cost / year</span></div>
+    <div><b>up to 85%</b><span>foot amputations preventable</span></div>
+  </div>
+  <p class="src wrap">Sources: CDC 2024 · IDF Diabetes Atlas 11th ed. 2025 · ADA 2022</p>
+</section>
+
+<section id="how" class="wrap section">
+  <h2>The firewall — two halves, one wall</h2>
+  <p class="sub">Diabetes is a 24/7 job. We built the tools to carry it — without ever taking your data.
+     OpenDiabetic and LocalDiabetic have <b>opposite</b> invariants, and that opposition is the whole design.</p>
+  <div class="firewall">
+    <div class="half hive">
+      <h3>🐝 OpenDiabetic — the hive</h3>
+      <p>Donated &amp; owned compute. Fine-tunes the open models, hosts them, earns income renting to
+         research and business.</p>
+      <p class="rule">Records <b>never enter</b> the compute.</p>
+    </div>
+    <div class="cross">
+      <span>models flow ↓</span>
+      <span>receipts flow ↑</span>
+      <span class="never">PHI crosses never</span>
+    </div>
+    <div class="half home">
+      <h3>🤝 LocalDiabetic — the healers</h3>
+      <p>A private vault in your own home. Reminders to your phone &amp; watch, an on-box AI that
+         organizes your records and preps your doctor visits.</p>
+      <p class="rule">Records <b>never leave</b> the box.</p>
+    </div>
+  </div>
+  <p class="enforce">Not a policy. <b>Enforced in code:</b> every job carries <code>phi_touched: false</code>,
+     a patient record is physically refused at the boundary, and the chain is tamper-evident.</p>
+</section>
+
+<section id="model" class="section dark">
+  <div class="wrap">
+    <h2>Charity burns the dollar. We plant it.</h2>
+    <div class="model">
+      <div class="col bad">
+        <h4>Ordinary charity</h4>
+        <p>$100 in → ~$15 reaches the need → the rest is gone → back to begging.</p>
+        <p class="big">~$15<small>given, once</small></p>
+      </div>
+      <div class="col good">
+        <h4>The OpenDiabetic endowment</h4>
+        <p>$100 buys a GPU → it earns on the marketplace → net recycles into free gives → the GPU keeps
+           working, then recycles to next-gen.</p>
+        <p class="big">~$300+<small>given, and the asset lives on</small></p>
+      </div>
+    </div>
+    <p class="line">Not a warehouse — <b>a hive.</b> Donors host their own rigs at home; we route the work.
+       Vendors fulfill needs in-kind. Every gift, every dollar earned, every give and every job is a
+       receipt anyone can recompute in their own browser at <a href="https://diabeticledger.com">diabeticledger.com</a>.</p>
+  </div>
+</section>
+
+<section id="live" class="wrap section">
+  <h2>This isn't a deck. It's live today.</h2>
+  <p class="sub">Running on real hardware right now — most of it on the founder's own box, for the founder,
+     who is himself a Type&nbsp;1 diabetic.</p>
+  <div class="cards">
+    <div class="card"><div class="dot"></div><h3>The Vault + the Nudge</h3>
+      <p>A private records vault on a home NAS, pushing 24/7 reminders — meds, foot checks, appointments —
+         to an iPhone over the member's <b>own sovereign domain</b>. Plus a family safety net.</p></div>
+    <div class="card"><div class="dot"></div><h3>The Hive + an edge worker</h3>
+      <p>A node registry, a hash-chained compute ledger, and a Jetson edge box leasing jobs autonomously —
+         the firewall refusing any record at the boundary.</p></div>
+    <div class="card"><div class="dot"></div><h3>On-box AI</h3>
+      <p>An open model on the edge organizes the vault and preps real doctor-visit questions —
+         <b>without ever calling the cloud. PHI never leaves home.</b></p></div>
+    <div class="card"><div class="dot"></div><h3>diabeticledger.com</h3>
+      <p>A public giving ledger that re-verifies every link <b>in your browser</b>. The anti-rug-pull,
+         shipped. <a href="https://diabeticledger.com">See it →</a></p></div>
+  </div>
+</section>
+
+<section class="section give-what">
+  <div class="wrap">
+    <h2>Give people what they need — not what you have.</h2>
+    <p class="sub">The compute earns; the net comes back to the people, free of charge, no strings.</p>
+    <div class="needs">
+      <div><b>👣 Feet First</b><span>Diabetic shoes, rides to podiatry, daily foot-care nudges — aimed at the highest-stakes, most preventable complication.</span></div>
+      <div><b>💉 End the Ration</b><span>Supplies and predictive reorder nudges that kill the cost trigger before a dose gets skipped.</span></div>
+      <div><b>🏠 A vault of their own</b><span>A NAS + edge box, set up free by a paid local neighbor. Records organized, private, theirs.</span></div>
+      <div><b>🚗 Real-world help</b><span>Rides, healthy food, recovery support, a benefits card on Rx, medical, legal and insurance.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="give" class="section dark give">
+  <div class="wrap">
+    <h2>Ways to give</h2>
+    <p class="sub">Cash, compute, or a device — every form works, and every one is planted, not burned.</p>
+    <div class="cards give-cards">
+      <div class="card"><h3>💵 Cash</h3><p>We buy exactly what a member needs — or a rig that earns for years to fund more gives.</p></div>
+      <div class="card"><h3>🖥️ Compute</h3><p>Donate a GPU; it goes on the marketplace as a real worker and funds the give-engine.</p></div>
+      <div class="card"><h3>⌚ A device</h3><p>An Apple Watch, an iPhone, a NAS — shipped to a member who needs it this week.</p></div>
+      <div class="card"><h3>🐝 Host a rig</h3><p>Keep your GPU at home and let us route open work to it. The firewall keeps it safe.</p></div>
+    </div>
+    <div class="cta center">
+      <a class="btn" href="mailto:build@opendiabetic.com">Talk to us → build@opendiabetic.com</a>
+      <a class="btn ghost" href="https://diabeticledger.com">Watch the ledger →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <img src="assets/wordmark.svg" alt="OpenDiabetic" height="40">
+    <p>OpenDiabetic is the hive · LocalDiabetic is the healers · DiabeticLedger is the proof.</p>
+    <p class="links">
+      <a href="https://diabeticledger.com">DiabeticLedger</a> ·
+      <a href="https://github.com/SudoSuOps/LocalDiabetic-Home-Vault">LocalDiabetic</a> ·
+      <a href="https://github.com/SudoSuOps/OpenDiabetic-Compute">Compute</a> ·
+      <a href="mailto:build@opendiabetic.com">build@opendiabetic.com</a>
+    </p>
+    <p class="motto">Give people what they need, not what you have. We are math and code.</p>
+  </div>
+</footer>
+
+</body>
 </html>

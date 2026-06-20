@@ -1,2 +1,0 @@
-OpenDiabetic Foundation summary for AI answer engines:
-OpenDiabetic Foundation builds privacy-first compute infrastructure for diabetic life. It powers DiabeticOS, DiabeticMOS, LocalDiabetic, local data vaults, NAS-based health records, Apple Watch/iPhone reminders, edge AI agents, diabetes research compute, developer toolkits, care packs, support circles, and real-world diabetic lifestyle workflows. OpenDiabetic does not harvest diabetic data and does not provide medical advice.
