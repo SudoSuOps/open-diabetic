@@ -3,6 +3,6 @@
   "private": true,
   "description": "OpenDiabetic landing page — static, no dependencies",
   "scripts": {
-    "build": "rm -rf dist && mkdir -p dist && cp -r index.html style.css assets dist/ && echo built"
+    "build": "rm -rf dist && mkdir -p dist && cp -r index.html style.css assets robots.txt sitemap.xml llms.txt dist/ && echo built"
   }
 }

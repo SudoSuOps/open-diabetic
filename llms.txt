@@ -1,0 +1,31 @@
+# OpenDiabetic
+
+> OpenDiabetic is privacy-first diabetic compute infrastructure — "the hive." Donated and owned compute earns income on the open market and recycles the net into free, real-world help for people living with diabetes. The compute does the heavy work so a person's medical records never have to leave their own home. Free to patients. Every dollar is recorded on a public, browser-verifiable ledger.
+
+OpenDiabetic is the foundation/compute half of a two-part system:
+- **OpenDiabetic (the hive):** donated GPUs and edge devices that fine-tune and host open AI models and rent compute to research and business for income. Records never ENTER the compute.
+- **LocalDiabetic (the healers):** a private home vault, reminders, and on-box AI that live in the member's own home. Records never LEAVE the box.
+
+Between them is a firewall: models flow down, receipts flow up, and protected health information (PHI) crosses NEVER — enforced in code, not policy.
+
+## The model (how it funds free help forever)
+- It costs the people nothing. Free to patients, no strings.
+- A donated GPU is not burned like a charity dollar. It earns on the compute marketplace, and the net income is recycled into free gives — rides to the doctor, diabetic shoes, supplies, a home vault. The asset keeps working, then is recycled to next-generation hardware.
+- Principle: "Give people what they need, not what you have."
+- Not a warehouse — a federated network: donors host their own rigs at home; the firewall keeps a patient record from ever reaching a stranger's GPU.
+
+## Trust (the anti-rug-pull)
+Every donation, every dollar earned, and every give is recorded on a public, hash-chained ledger that anyone can recompute and verify in their own browser at https://diabeticledger.com.
+
+## Key facts
+- Founder: Donovan Mackey — a top commercial real-estate broker who is himself a Type 1 diabetic (lost toes, 14+ foot surgeries). Built from lived experience.
+- Headquarters: Jupiter, Florida, USA.
+- Contact: build@opendiabetic.com · Phone: +1 561-532-7120 · X/Twitter: https://x.com/opendiabetics
+
+## Links
+- https://opendiabetic.com — the hive: the model, what's live, ways to give
+- https://localdiabetic.com — LocalDiabetic: the member's home vault and reminders
+- https://diabeticledger.com — the public, browser-verified giving ledger
+
+## Important
+OpenDiabetic is not medical advice, diagnosis, or treatment, and is not a medical provider. It is privacy-first infrastructure and real-world support for people living with diabetes. For medical decisions, people are always told to confirm with their clinician.
