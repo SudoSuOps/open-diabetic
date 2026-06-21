@@ -127,3 +127,5 @@ h2{font-size:clamp(26px,4vw,40px);font-weight:800;margin:0 0 8px;text-align:cent
 }
 
 .bee{font-size:1.4em;line-height:1;margin-right:.15em;vertical-align:-.05em}
+.footer .legal{font-size:12px;color:#8a7d6c;margin-top:10px;line-height:1.5}
+.footer .legal b{color:#6b5e4f}
