@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenDiabetic — a free diabetic lifestyle assistant</title>
+<meta name="description" content="A free diabetic lifestyle assistant. Understand lab results, organize records, track medications, learn about diabetic nutrition, build shopping lists, and more. Powered by OpenDiabetic 27B. Not medical advice.">
+<link rel="icon" href="assets/bee.svg" type="image/svg+xml">
+<link rel="canonical" href="https://opendiabetic.com/try.html">
+<meta name="theme-color" content="#FBF7EF">
+<meta property="og:title" content="OpenDiabetic — a free diabetic lifestyle assistant">
+<meta property="og:description" content="Understand labs, organize records, plan food, set reminders. Powered by OpenDiabetic 27B. Private. Transparent. Built by diabetics. Not medical advice.">
+<meta property="og:image" content="https://opendiabetic.com/assets/og.png">
+<style>
+  :root{--honey:#D99A2B;--ink:#2B2118;--mut:#6b5e4f;--line:#e6dcc8;--paper:#FBF7EF;--card:#fff;--red:#C0392B}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font:17px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px}
+  header{padding:30px 0 6px;text-align:center}
+  .pre{color:var(--honey);font-weight:700;font-size:13px;letter-spacing:.4px;text-transform:uppercase}
+  h1{font-size:clamp(26px,5vw,38px);font-weight:800;letter-spacing:-.5px;margin:8px 0 6px}
+  .tag{color:var(--mut);font-size:18px;margin:0}
+  /* disclaimer */
+  .disclaimer{max-width:760px;margin:18px auto 0;background:#fff7ec;border:1px solid #ead0a0;border-left:4px solid var(--honey);
+    border-radius:10px;padding:12px 16px;font-size:14px;line-height:1.55;color:#5a4a2a}
+  .disclaimer b{color:#7a5d12}
+  /* uses */
+  .uses{display:grid;grid-template-columns:1fr 1fr;gap:6px 22px;margin:22px 0 6px;list-style:none;padding:0}
+  .uses li{padding:5px 0;color:var(--ink);font-size:15px}
+  .uses li::before{content:"·";color:var(--honey);font-weight:800;margin-right:9px}
+  .meta{text-align:center;color:var(--mut);font-size:14px;margin:8px 0 0}
+  .meta b{color:var(--ink)}
+  /* chat */
+  .ask{margin:26px 0 60px}
+  .ask h2{font-size:20px;margin:0 0 12px;text-align:center}
+  #log{display:flex;flex-direction:column;gap:12px;margin-bottom:14px}
+  .msg{padding:13px 16px;border-radius:14px;max-width:90%;white-space:pre-wrap;word-wrap:break-word}
+  .msg.u{align-self:flex-end;background:var(--honey);color:#1a1205;font-weight:500;border-bottom-right-radius:4px}
+  .msg.a{align-self:flex-start;background:var(--card);border:1px solid var(--line);border-bottom-left-radius:4px}
+  .msg.sys{align-self:center;color:var(--mut);font-size:13px;font-style:italic;background:none;text-align:center}
+  form{display:flex;gap:10px;align-items:flex-end;position:sticky;bottom:0;background:var(--paper);padding:10px 0}
+  textarea{flex:1;resize:none;min-height:54px;max-height:180px;padding:14px 16px;border:1.5px solid var(--line);
+    border-radius:14px;font:inherit;background:#fff;color:var(--ink)}
+  textarea:focus{outline:2px solid var(--honey);border-color:var(--honey)}
+  button{background:var(--honey);color:#1a1205;border:0;font-weight:800;padding:0 22px;height:54px;
+    border-radius:14px;font-size:16px;cursor:pointer}
+  button:disabled{opacity:.5;cursor:default}
+  .foot{text-align:center;color:var(--mut);font-size:12.5px;padding:0 0 30px;line-height:1.6}
+  .foot a{color:var(--honey)}
+  @media(max-width:560px){.uses{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="pre">🐝 Free Public Preview</div>
+    <h1>OpenDiabetic</h1>
+    <p class="tag">A free diabetic lifestyle assistant.</p>
+  </header>
+
+  <div class="disclaimer">
+    <b>Diabetic lifestyle support, education &amp; organization — not medical advice.</b> OpenDiabetic helps you
+    understand and organize. It does not diagnose, prescribe, or replace your care team. <b>For emergencies, call 911.</b>
+    Don't change medication or insulin without your doctor. Nothing you type here is stored.
+  </div>
+
+  <ul class="uses">
+    <li>Understand lab results</li>
+    <li>Organize medical records</li>
+    <li>Track medications</li>
+    <li>Understand insurance documents</li>
+    <li>Learn about diabetic nutrition</li>
+    <li>Build shopping lists</li>
+    <li>Create reminder plans</li>
+    <li>Understand doctor instructions</li>
+    <li>Maintain a personal health vault</li>
+  </ul>
+  <p class="meta">Powered by <b>OpenDiabetic 27B</b> · Private · Transparent · Built by diabetics</p>
+
+  <section class="ask">
+    <h2>Ask OpenDiabetic</h2>
+    <div id="log">
+      <div class="msg a">Hi — I'm OpenDiabetic, a free diabetic lifestyle assistant. Ask me to explain a lab result,
+        plan a diabetic-friendly meal, build a shopping list, set up a reminder plan, or make sense of a doctor's note.
+        I'm here to help you understand and organize — not to give medical advice.</div>
+    </div>
+    <form id="f">
+      <textarea id="q" placeholder="Ask anything about diabetic life…  (e.g. “What does an A1C of 7.2 mean?” or “Plan 3 diabetic-friendly dinners and a shopping list.”)" autocomplete="off"></textarea>
+      <button id="send" type="submit">Ask</button>
+    </form>
+  </section>
+
+  <p class="foot">
+    OpenDiabetic 27B · educational diabetic lifestyle assistant · not medical advice · not a diagnosis · emergencies → 911<br>
+    © 2026 Swarm and Bee LLC · <a href="https://opendiabetic.com">OpenDiabetic</a> · <a href="mailto:build@opendiabetic.com">build@opendiabetic.com</a>
+  </p>
+</div>
+
+<script>
+// Inference endpoint — OpenAI-compatible /v1/chat/completions through the Cloudflare tunnel.
+// Set this to the public tunnel URL once serving is live. Works with vLLM OR ollama (same API).
+const ENDPOINT = ""; // e.g. "https://ask.opendiabetic.com/v1/chat/completions"
+const MODEL = "diabetic-life";
+
+// Server-side enforcement is the real guardrail; this is defense-in-depth + sets the lane.
+const SYSTEM_PROMPT =
+  "You are OpenDiabetic, a free diabetic LIFESTYLE assistant — education and organization only. " +
+  "You help people understand lab results and doctor notes, organize records and medications, plan diabetic-friendly " +
+  "food and shopping lists, and build reminder plans. You are NOT a doctor. You do NOT diagnose, prescribe, or " +
+  "recommend changing medication or insulin doses — for anything like that, tell the person to consult their care team. " +
+  "If a message suggests a medical emergency (chest pain, very high/low blood sugar with symptoms, DKA signs, " +
+  "thoughts of self-harm), tell them to call 911 or their local emergency number immediately. Be warm, plain-spoken, " +
+  "and practical. Always remind, when relevant, that this is general education, not medical advice.";
+
+const log = document.getElementById("log"), f = document.getElementById("f"),
+      q = document.getElementById("q"), send = document.getElementById("send");
+const history = [{role:"system", content:SYSTEM_PROMPT}];
+
+function add(cls, text){ const d=document.createElement("div"); d.className="msg "+cls; d.textContent=text; log.appendChild(d); d.scrollIntoView({behavior:"smooth",block:"end"}); return d; }
+
+q.addEventListener("keydown", e=>{ if(e.key==="Enter" && !e.shiftKey){ e.preventDefault(); f.requestSubmit(); }});
+
+f.addEventListener("submit", async e=>{
+  e.preventDefault();
+  const text = q.value.trim(); if(!text) return;
+  add("u", text); history.push({role:"user", content:text});
+  q.value=""; send.disabled=true;
+  if(!ENDPOINT){ add("sys","(Preview is warming up — the model endpoint isn't connected yet. Check back shortly.)"); send.disabled=false; return; }
+  const out = add("a","…"); let acc="";
+  try{
+    const res = await fetch(ENDPOINT, {
+      method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({model:MODEL, messages:history, stream:true, temperature:0.4, max_tokens:800})
+    });
+    const reader = res.body.getReader(), dec = new TextDecoder();
+    while(true){
+      const {value,done} = await reader.read(); if(done) break;
+      for(const line of dec.decode(value).split("\n")){
+        const s=line.trim(); if(!s.startsWith("data:")) continue;
+        const data=s.slice(5).trim(); if(data==="[DONE]") continue;
+        try{ const j=JSON.parse(data); const tok=j.choices?.[0]?.delta?.content||""; if(tok){ acc+=tok; out.textContent=acc; out.scrollIntoView({block:"end"}); } }catch(_){}
+      }
+    }
+    if(acc) history.push({role:"assistant", content:acc});
+  }catch(err){ out.textContent="Sorry — I couldn't reach the model just now. Please try again in a moment."; }
+  send.disabled=false; q.focus();
+});
+</script>
+</body>
+</html>
