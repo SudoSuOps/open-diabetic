@@ -39,6 +39,12 @@
   .msg.u{align-self:flex-end;background:var(--honey);color:#1a1205;font-weight:500;border-bottom-right-radius:4px}
   .msg.a{align-self:flex-start;background:var(--card);border:1px solid var(--line);border-bottom-left-radius:4px}
   .msg.sys{align-self:center;color:var(--mut);font-size:13px;font-style:italic;background:none;text-align:center}
+  .typing{display:inline-flex;gap:5px;align-items:center;height:20px}
+  .typing i{width:7px;height:7px;border-radius:50%;background:var(--honey);animation:td 1.1s infinite both}
+  .typing i:nth-child(2){animation-delay:.18s} .typing i:nth-child(3){animation-delay:.36s}
+  @keyframes td{0%,70%,100%{opacity:.3;transform:translateY(0)}35%{opacity:1;transform:translateY(-4px)}}
+  .msg.a.streaming::after{content:"▍";color:var(--honey);margin-left:1px;animation:blink 1s steps(2,start) infinite}
+  @keyframes blink{50%{opacity:0}}
   form{display:flex;gap:10px;align-items:flex-end;position:sticky;bottom:0;background:var(--paper);padding:10px 0}
   textarea{flex:1;resize:none;min-height:54px;max-height:180px;padding:14px 16px;border:1.5px solid var(--line);
     border-radius:14px;font:inherit;background:#fff;color:var(--ink)}
@@ -117,34 +123,62 @@ const log = document.getElementById("log"), f = document.getElementById("f"),
       q = document.getElementById("q"), send = document.getElementById("send");
 const history = [{role:"system", content:SYSTEM_PROMPT}];
 
-function add(cls, text){ const d=document.createElement("div"); d.className="msg "+cls; d.textContent=text; log.appendChild(d); d.scrollIntoView({behavior:"smooth",block:"end"}); return d; }
+// scroll to bottom ONLY if the reader is already near the bottom (so they can scroll up to read freely),
+// instant (no smooth-animation thrash), and at most once per animation frame.
+let scrollQueued = false;
+function pinBottom(){
+  if(scrollQueued) return; scrollQueued = true;
+  requestAnimationFrame(()=>{
+    scrollQueued = false;
+    const nearBottom = (window.innerHeight + window.scrollY) >= (document.body.scrollHeight - 140);
+    if(nearBottom) window.scrollTo(0, document.body.scrollHeight);
+  });
+}
+function add(cls, html){ const d=document.createElement("div"); d.className="msg "+cls;
+  if(html instanceof Node) d.appendChild(html); else d.textContent=html;
+  log.appendChild(d); pinBottom(); return d; }
 
+// auto-grow the input
+q.addEventListener("input", ()=>{ q.style.height="auto"; q.style.height=Math.min(q.scrollHeight,180)+"px"; });
 q.addEventListener("keydown", e=>{ if(e.key==="Enter" && !e.shiftKey){ e.preventDefault(); f.requestSubmit(); }});
 
 f.addEventListener("submit", async e=>{
   e.preventDefault();
   const text = q.value.trim(); if(!text) return;
   add("u", text); history.push({role:"user", content:text});
-  q.value=""; send.disabled=true;
+  q.value=""; q.style.height="auto"; send.disabled=true;
   if(!ENDPOINT){ add("sys","(Preview is warming up — the model endpoint isn't connected yet. Check back shortly.)"); send.disabled=false; return; }
-  const out = add("a","…"); let acc="";
+
+  // assistant bubble starts as a typing indicator → becomes the streamed answer
+  const dots = document.createElement("span"); dots.className="typing"; dots.innerHTML="<i></i><i></i><i></i>";
+  const out = add("a", dots);
+  let acc="", started=false, raf=null;
+  const paint = ()=>{ raf=null; out.textContent=acc; out.classList.add("streaming"); pinBottom(); };
   try{
     const res = await fetch(ENDPOINT, {
       method:"POST", headers:{"Content-Type":"application/json"},
       body: JSON.stringify({model:MODEL, messages:history, stream:true, temperature:0.4, max_tokens:800})
     });
+    if(!res.ok || !res.body) throw new Error("bad response");
     const reader = res.body.getReader(), dec = new TextDecoder();
     while(true){
       const {value,done} = await reader.read(); if(done) break;
-      for(const line of dec.decode(value).split("\n")){
+      for(const line of dec.decode(value, {stream:true}).split("\n")){
         const s=line.trim(); if(!s.startsWith("data:")) continue;
-        const data=s.slice(5).trim(); if(data==="[DONE]") continue;
-        try{ const j=JSON.parse(data); const tok=j.choices?.[0]?.delta?.content||""; if(tok){ acc+=tok; out.textContent=acc; out.scrollIntoView({block:"end"}); } }catch(_){}
+        const data=s.slice(5).trim(); if(!data || data==="[DONE]") continue;
+        try{ const tok=JSON.parse(data).choices?.[0]?.delta?.content||"";
+          if(tok){ if(!started){ started=true; out.textContent=""; } acc+=tok; if(!raf) raf=requestAnimationFrame(paint); }
+        }catch(_){}
       }
     }
+    if(raf) cancelAnimationFrame(raf);
+    out.textContent = acc || "…"; out.classList.remove("streaming");
     if(acc) history.push({role:"assistant", content:acc});
-  }catch(err){ out.textContent="Sorry — I couldn't reach the model just now. Please try again in a moment."; }
-  send.disabled=false; q.focus();
+  }catch(err){
+    out.classList.remove("streaming");
+    out.textContent="Sorry — I couldn't reach the assistant just now. Please try again in a moment.";
+  }
+  send.disabled=false; q.focus(); pinBottom();
 });
 </script>
 </body>
