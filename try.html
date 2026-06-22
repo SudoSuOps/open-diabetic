@@ -100,7 +100,7 @@
 <script>
 // Inference endpoint — OpenAI-compatible /v1/chat/completions through the Cloudflare tunnel.
 // Set this to the public tunnel URL once serving is live. Works with vLLM OR ollama (same API).
-const ENDPOINT = ""; // e.g. "https://ask.opendiabetic.com/v1/chat/completions"
+const ENDPOINT = "https://ask.opendiabetic.com/v1/chat/completions";
 const MODEL = "diabetic-life";
 
 // Server-side enforcement is the real guardrail; this is defense-in-depth + sets the lane.
