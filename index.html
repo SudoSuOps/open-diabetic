@@ -1,289 +1,286 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OpenDiabetic — the hive does the work, your records stay home</title>
-<meta name="description" content="OpenDiabetic is donated compute that earns for the people it serves — a federated hive of rigs that does the heavy work so a diabetic's records never have to leave home. Free to patients, funded by a compute endowment, every dollar verifiable on a public ledger.">
-<link rel="icon" href="assets/bee.svg" type="image/svg+xml">
+<!doctype html><html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OpenDiabetic — The first dedicated diabetic-compute-engine</title>
+<meta name="description" content="OpenDiabetic — a founder-led, self-funded, NVIDIA-Blackwell-powered diabetic-compute-engine. Compute in, help out. The foundation that makes LocalDiabetic possible.">
 <link rel="canonical" href="https://opendiabetic.com/">
-<meta name="robots" content="index,follow,max-image-preview:large">
-<meta name="theme-color" content="#0B0F14">
-<meta name="author" content="OpenDiabetic Foundation">
-<meta name="keywords" content="diabetic compute, privacy-first diabetes, donate compute, diabetic compute datacenter, diabetic foundation, sovereign AI health, free diabetic help, diabetes nonprofit">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="OpenDiabetic">
-<meta property="og:url" content="https://opendiabetic.com/">
-<meta property="og:title" content="OpenDiabetic — the hive does the work, your records stay home">
-<meta property="og:description" content="Donated compute that earns for the people it serves. Free to patients, funded by a compute endowment, every dollar verifiable on a public ledger.">
-<meta property="og:image" content="https://opendiabetic.com/assets/og.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="OpenDiabetic — the hive does the work, your records stay home">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@opendiabetics">
-<meta name="twitter:title" content="OpenDiabetic — the hive does the work, your records stay home">
-<meta name="twitter:description" content="Donated compute that earns for the people it serves. Free to patients; every dollar on a public, browser-verified ledger.">
-<meta name="twitter:image" content="https://opendiabetic.com/assets/og.png">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": ["NGO", "Organization"],
-      "@id": "https://opendiabetic.com/#org",
-      "name": "OpenDiabetic",
-      "alternateName": "OpenDiabetic Foundation",
-      "url": "https://opendiabetic.com",
-      "logo": "https://opendiabetic.com/assets/icon.svg",
-      "image": "https://opendiabetic.com/assets/og.png",
-      "description": "Privacy-first diabetic compute infrastructure. Donated compute that earns income to fund free, real-world help for people living with diabetes — records never leave home.",
-      "slogan": "The hive does the work. Your records stay home.",
-      "founder": { "@type": "Person", "name": "Donovan Mackey", "description": "Commercial real estate broker and Type 1 diabetic; founder building from lived experience." },
-      "foundingLocation": { "@type": "Place", "name": "Jupiter, Florida, USA" },
-      "address": { "@type": "PostalAddress", "addressLocality": "Jupiter", "addressRegion": "FL", "addressCountry": "US" },
-      "email": "build@opendiabetic.com",
-      "telephone": "+1-561-532-7120",
-      "sameAs": ["https://x.com/opendiabetics", "https://huggingface.co/SwarmandBee", "https://diabeticdocs.com", "https://diabeticnode.com", "https://diabeticdatasets.com", "https://diabeticmodels.com", "https://diabetictruth.org", "https://diabeticledger.com", "https://diabeticdonation.com", "https://localdiabetic.com", "https://github.com/SudoSuOps"],
-      "knowsAbout": ["diabetes support", "privacy-first compute", "sovereign AI", "diabetic foot care", "medical record privacy", "charitable compute endowment", "diabetes nonprofit"],
-      "parentOrganization": {
-        "@type": "Organization",
-        "name": "Swarm and Bee LLC",
-        "legalName": "Swarm and Bee LLC",
-        "alternateName": "Swarm & Bee AI",
-        "address": { "@type": "PostalAddress", "addressRegion": "FL", "addressCountry": "US" },
-        "identifier": [
-          { "@type": "PropertyValue", "propertyID": "SAM UEI", "value": "L9EXVH9L9VU6" },
-          { "@type": "PropertyValue", "propertyID": "CAGE", "value": "20YM3" },
-          { "@type": "PropertyValue", "propertyID": "DUNS", "value": "138652395" }
-        ]
-      }
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://opendiabetic.com/#website",
-      "url": "https://opendiabetic.com",
-      "name": "OpenDiabetic",
-      "description": "Privacy-first diabetic compute infrastructure — the hive.",
-      "publisher": { "@id": "https://opendiabetic.com/#org" },
-      "inLanguage": "en-US"
-    }
-  ]
-}
-</script>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header class="nav">
-  <a class="brand" href="/"><span class="bee" aria-hidden="true">🐝</span><span>Open<b>Diabetic</b></span></a>
-  <nav>
-    <a href="/try">Ask OpenDiabetic</a>
-    <a href="#how">How it works</a>
-    <a href="#model">The model</a>
-    <a href="#live">Live today</a>
-    <a href="#rent">Rent the hive</a>
-    <a href="#give">Give</a>
-    <a class="btn" href="/try">Try it free →</a>
-  </nav>
-</header>
-
-<section class="hero">
-  <div class="wrap">
-    <img class="wordmark" src="assets/wordmark.svg" alt="OpenDiabetic" height="58">
-    <h1>The hive does the work.<br><span>Your records stay home.</span></h1>
-    <p class="lede">OpenDiabetic is donated compute that earns for the people it serves — a federated
-      hive of rigs that does the heavy lifting so a diabetic's records never have to leave their own
-      home. <b>Free to the people. Funded by the compute. Every dollar on a public ledger.</b></p>
-    <div class="cta">
-      <a class="btn" href="/try">Ask OpenDiabetic →</a>
-      <a class="btn ghost" href="#give">Give back</a>
-      <a class="btn ghost" href="https://diabeticledger.com">Watch every dollar →</a>
-    </div>
-    <p class="micro">Free diabetic life assistant · powered by OpenDiabetic 27B · not medical advice</p>
+<meta property="og:title" content="OpenDiabetic — The first dedicated diabetic-compute-engine">
+<meta property="og:description" content="Powered by NVIDIA Blackwell. Self-funded. Built for them. Compute in, help out.">
+<meta property="og:url" content="https://opendiabetic.com/"><meta property="og:type" content="website">
+<meta property="og:image" content="https://opendiabetic.com/assets/og.png"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/favicon/bee.svg"><link rel="icon" href="/assets/bee.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0B0F14;--paper:#FBF7EF;--honey:#F2B441;}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#0B0F14;color:#E8EEF5;font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+h1,h2,h3{margin:0}
+.wrap{margin:0 auto;padding:0 24px}
+.kick{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#D99A2B;font-weight:600;margin-bottom:18px}
+.kick-d{color:#e7c98a}
+.lede{font-size:18px;line-height:1.6;color:#6b5e4f;max-width:660px;margin:18px auto 0}
+.lede-d{color:#9aa7b3}
+.h2{font-weight:800;font-size:clamp(28px,4.4vw,46px);letter-spacing:-1.1px;line-height:1.12}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(11,15,20,.82);backdrop-filter:blur(12px);border-bottom:1px solid #1F2A36}
+header .row{max-width:1180px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+header nav{display:flex;align-items:center;gap:24px;font-size:14.5px;font-weight:500;color:#9aa7b3}
+header nav a{text-decoration:none;transition:color .2s}
+header nav a:hover{color:#F2B441}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand b{font-size:19px;letter-spacing:-.3px}
+.cta{background:#F2B441;color:#1a1205;font-weight:800;padding:9px 18px;border-radius:11px;text-decoration:none;box-shadow:0 6px 16px -9px rgba(217,154,43,.8)}
+.btn{display:inline-block;font-weight:800;padding:13px 24px;border-radius:12px;text-decoration:none;font-size:15.5px}
+.btn-h{background:#F2B441;color:#1a1205;box-shadow:0 8px 24px -8px rgba(242,180,65,.6)}
+.btn-ghost{background:rgba(255,255,255,.05);border:1px solid #2c3947;color:#cdd6df}
+.btn-ghost:hover{border-color:#F2B441}
+section{position:relative;overflow:hidden}
+.glow{position:absolute;left:50%;top:8%;width:1100px;height:900px;transform:translateX(-50%);pointer-events:none;background:radial-gradient(circle,rgba(242,180,65,.22) 0%,rgba(242,180,65,.06) 42%,transparent 66%);animation:od-pulse 7s ease-in-out infinite}
+.pill{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono',monospace;font-size:12px;border-radius:999px;padding:7px 14px}
+.chip{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.04);border:1px solid #2c3947;border-radius:999px;padding:9px 15px;font-size:13.5px;color:#cdd6df}
+/* cards */
+.card,.inv{background:#FBF7EF;border:1px solid #ece3d2;border-radius:18px;padding:28px;transition:transform .28s cubic-bezier(.2,.7,.2,1),box-shadow .28s}
+.card:hover,.inv:hover,.mcard:hover{transform:translateY(-5px);box-shadow:0 24px 48px -28px rgba(0,0,0,.55)}
+.card h3{font-size:20px;font-weight:800;color:#2B2118;margin:16px 0 8px}
+.card p{font-size:15.5px;line-height:1.55;color:#6b5e4f;margin:0}
+.card.gate{background:#2B2118;border-color:#2B2118}
+.cardtop{display:flex;align-items:flex-start;justify-content:space-between}
+.itile{width:46px;height:46px;border-radius:13px;background:#FBF0D8;border:1px solid #F0DCA8;display:flex;align-items:center;justify-content:center}
+.gate-itile{background:rgba(242,180,65,.14);border-color:rgba(242,180,65,.3)}
+.flag{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:.06em;border-radius:999px;padding:5px 11px;display:inline-flex;align-items:center;gap:6px}
+.flag-live{background:rgba(47,182,122,.12);border:1px solid rgba(47,182,122,.4);color:#1f8f5d}
+.flag-build{background:rgba(217,154,43,.12);border:1px solid #F0DCA8;color:#a8741a}
+.dot{width:7px;height:7px;border-radius:50%}
+.mcard{background:#fff;border:1px solid #ece3d2;border-radius:16px;padding:24px;transition:transform .28s cubic-bezier(.2,.7,.2,1),box-shadow .28s}
+.mcard h4{font-size:17px;font-weight:800;color:#2B2118;margin:14px 0 6px}
+.mcard p{font-size:14px;line-height:1.55;color:#6b5e4f;margin:0}
+/* engine bars */
+.rig{background:rgba(255,255,255,.03);border:1px solid #1F2A36;border-radius:22px;padding:32px}
+.bars{display:flex;align-items:flex-end;gap:8px;height:120px;margin:22px 0}
+.bar{flex:1;background:linear-gradient(180deg,#F2B441,#D99A2B);border-radius:5px;transform-origin:bottom;animation:od-rig 2.4s ease-in-out infinite}
+.specrow{display:flex;justify-content:space-between;font-family:'JetBrains Mono',monospace;font-size:13px;padding:11px 0;border-top:1px solid #1a2430}
+.specrow .l{color:#7d8893}
+/* involve */
+.inv{display:block;text-decoration:none}
+.inv h3{font-size:19px;font-weight:800;color:#2B2118;margin:14px 0 7px}
+.inv p{font-size:14.5px;line-height:1.55;color:#6b5e4f;margin:0 0 14px}
+.inv .invlink{font-family:'JetBrains Mono',monospace;font-size:13px;color:#D99A2B;font-weight:600}
+.inv-dark{background:#2B2118;border-color:#2B2118}
+.inv-dark h3{color:#fff} .inv-dark p{color:#b8a98f} .inv-dark .invlink{color:#F2B441}
+/* flywheel */
+.fly{position:relative;width:min(580px,100%);aspect-ratio:1/1;margin:40px auto 0}
+.fnode{position:absolute;transform:translate(-50%,-50%);background:rgba(255,255,255,.04);border:1px solid #2c3947;border-radius:14px;padding:12px 16px;text-align:center;min-width:120px}
+.fnode-hi{background:rgba(242,180,65,.12);border-color:rgba(242,180,65,.4)}
+.fnum{display:block;font-family:'JetBrains Mono',monospace;font-size:12px;color:#D99A2B}
+.flbl{display:block;font-size:14px;font-weight:700;color:#E8EEF5;margin-top:2px}
+.fsub{display:block;font-family:'JetBrains Mono',monospace;font-size:10.5px;color:#7d8893;margin-top:3px}
+.fcenter{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center}
+/* firewall */
+.fw{background:#fff;border:1px solid #ece3d2;border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1fr auto 1fr;box-shadow:0 2px 6px rgba(43,33,24,.04),0 40px 80px -54px rgba(43,33,24,.5)}
+.fwcol{padding:30px 26px}
+.fwmid{width:200px;background:#0B0F14;color:#E8EEF5;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:30px 18px}
+.fwmid:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 40%,rgba(242,180,65,.16),transparent 65%)}
+.fwmid>*{position:relative}
+.monorow{font-family:'JetBrains Mono',monospace;font-size:12.5px;display:flex;align-items:center;gap:9px;padding:7px 0;color:#6b5e4f}
+.sq{width:9px;height:9px;border-radius:2px;flex:none}
+/* one house */
+.house{display:grid;grid-template-columns:1fr auto 1fr;gap:22px;align-items:center;margin-top:40px}
+.hcard{border-radius:22px;padding:32px}
+.hcard.od{background:#0B0F14;border:1px solid #1F2A36}
+.hcard.ld{background:#FBF7EF;border:1px solid #ece3d2}
+/* footer */
+footer{background:#0B0F14;border-top:1px solid #1F2A36}
+footer .in{max-width:1140px;margin:0 auto;padding:72px 24px 44px}
+footer a{text-decoration:none;color:#9aa7b3;transition:color .2s} footer a:hover{color:#F2B441}
+.eco a{color:#9aa7b3} .sepdot{color:#3a4654;margin:0 8px}
+/* animations */
+@keyframes od-pulse{0%,100%{opacity:.6}50%{opacity:1}}
+@keyframes od-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes od-rig{0%,100%{transform:scaleY(.55)}50%{transform:scaleY(1)}}
+.float{animation:od-float 6s ease-in-out infinite}
+@media (max-width:720px){.fw,.house{grid-template-columns:1fr}.fwmid{width:auto}.two{grid-template-columns:1fr !important}}
+@media (prefers-reduced-motion:reduce){.glow,.float,.bar{animation:none}}
+</style></head><body><header><div class="row">
+ <a class="brand" href="/"><svg width="30" height="33" viewBox="0 0 120 132" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible"><path d="M54 20 C48 6 41 3 34 5" stroke="#2B2118" stroke-width="4.2" stroke-linecap="round"/><path d="M66 20 C72 6 79 3 86 5" stroke="#2B2118" stroke-width="4.2" stroke-linecap="round"/><circle cx="33" cy="5" r="4.4" fill="#F2B441" stroke="#2B2118" stroke-width="3"/><circle cx="87" cy="5" r="4.4" fill="#F2B441" stroke="#2B2118" stroke-width="3"/><ellipse cx="36" cy="54" rx="19" ry="26" fill="#FCE4B0" stroke="#2B2118" stroke-width="4.2" transform="rotate(-24 36 54)"/><ellipse cx="84" cy="54" rx="19" ry="26" fill="#FCE4B0" stroke="#2B2118" stroke-width="4.2" transform="rotate(24 84 54)"/><rect x="40" y="44" width="40" height="72" rx="20" fill="#F2B441" stroke="#2B2118" stroke-width="4.2"/><g clip-path="url(#b1)"><rect x="36" y="66" width="48" height="12" fill="#2B2118"/><rect x="36" y="90" width="48" height="12" fill="#2B2118"/></g><clipPath id="b1"><rect x="40" y="44" width="40" height="72" rx="20"/></clipPath><circle cx="60" cy="31" r="17" fill="#2B2118"/><circle cx="53" cy="29" r="3.4" fill="#FBF7EF"/><circle cx="67" cy="29" r="3.4" fill="#FBF7EF"/></svg><b><span style="font-weight:600;color:#E8EEF5">Open</span><span style="font-weight:800;color:#F2B441">Diabetic</span></b></a>
+ <nav><a href="#why">The why</a><a href="#engine">The engine</a><a href="#trust">Trust</a><a href="#sibling">LocalDiabetic</a>
+ <a class="cta" href="https://opendiabetic.com/try" target="_blank" rel="noopener">Try it</a></nav>
+</div></header><section><div class="glow"></div>
+ <div class="wrap" style="max-width:940px;text-align:center;padding-top:78px;padding-bottom:84px;position:relative">
+  <div class="float" style="display:flex;justify-content:center"><svg width="68" height="75" viewBox="0 0 120 132" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible"><path d="M54 20 C48 6 41 3 34 5" stroke="#2B2118" stroke-width="4.2" stroke-linecap="round"/><path d="M66 20 C72 6 79 3 86 5" stroke="#2B2118" stroke-width="4.2" stroke-linecap="round"/><circle cx="33" cy="5" r="4.4" fill="#F2B441" stroke="#2B2118" stroke-width="3"/><circle cx="87" cy="5" r="4.4" fill="#F2B441" stroke="#2B2118" stroke-width="3"/><ellipse cx="36" cy="54" rx="19" ry="26" fill="#FCE4B0" stroke="#2B2118" stroke-width="4.2" transform="rotate(-24 36 54)"/><ellipse cx="84" cy="54" rx="19" ry="26" fill="#FCE4B0" stroke="#2B2118" stroke-width="4.2" transform="rotate(24 84 54)"/><rect x="40" y="44" width="40" height="72" rx="20" fill="#F2B441" stroke="#2B2118" stroke-width="4.2"/><g clip-path="url(#b2)"><rect x="36" y="66" width="48" height="12" fill="#2B2118"/><rect x="36" y="90" width="48" height="12" fill="#2B2118"/></g><clipPath id="b2"><rect x="40" y="44" width="40" height="72" rx="20"/></clipPath><circle cx="60" cy="31" r="17" fill="#2B2118"/><circle cx="53" cy="29" r="3.4" fill="#FBF7EF"/><circle cx="67" cy="29" r="3.4" fill="#FBF7EF"/></svg></div>
+  <div class="pill" style="margin:26px auto 22px;background:rgba(242,180,65,.10);border:1px solid rgba(242,180,65,.32);color:#e7c98a">POWERED BY NVIDIA BLACKWELL · SELF-FUNDED</div>
+  <h1 style="font-weight:800;font-size:clamp(38px,5.8vw,66px);letter-spacing:-1.8px;line-height:1.04;color:#E8EEF5">The first dedicated <span style="color:#F2B441">diabetic-compute-engine.</span></h1>
+  <p style="font-size:19px;font-weight:600;color:#cdd6df;margin:26px auto 6px;max-width:720px">Diabetes is a 24/7 job. You don't have to carry it alone.</p>
+  <p style="font-size:18px;color:#9aa7b3;margin:0 auto;max-width:760px;line-height:1.6">Win big — every day. Not someday. We own the machines, point them at the disease, and turn what they earn into real help. Built for them.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:28px 0">
+   <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#D99A2B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M3 12h4l2-5 3 9 2-4h7"/></svg><span style="color:#cdd6df">Lived &amp; scarred</span></span>
+   <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#D99A2B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg><span style="color:#cdd6df">NVIDIA Blackwell</span></span>
+   <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#D99A2B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg><span style="color:#cdd6df">Self-funded · no VC</span></span>
+   <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="#D99A2B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg><span style="color:#cdd6df">First of its kind</span></span>
   </div>
-</section>
-
-<section class="band">
-  <div class="wrap stats">
-    <div><b>38.1M</b><span>U.S. diabetics</span></div>
-    <div><b>589M</b><span>worldwide</span></div>
-    <div><b>$412.9B</b><span>U.S. cost / year</span></div>
-    <div><b>up to 85%</b><span>foot amputations preventable</span></div>
+  <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
+   <a class="btn btn-h" href="https://opendiabetic.com/try" target="_blank" rel="noopener">Try it today →</a>
+   <a class="btn btn-ghost" href="#engine">See the engine</a>
   </div>
-  <p class="src wrap">Sources: CDC 2024 · IDF Diabetes Atlas 11th ed. 2025 · ADA 2022</p>
-</section>
-
-<section id="how" class="wrap section">
-  <h2>The firewall — two halves, one wall</h2>
-  <p class="sub">Diabetes is a 24/7 job. We built the tools to carry it — without ever taking your data.
-     OpenDiabetic and LocalDiabetic have <b>opposite</b> invariants, and that opposition is the whole design.</p>
-  <div class="firewall">
-    <div class="half hive">
-      <h3>🐝 OpenDiabetic — the hive</h3>
-      <p>Donated &amp; owned compute. Fine-tunes the open models, hosts them, earns income renting to
-         research and business.</p>
-      <p class="rule">Records <b>never enter</b> the compute.</p>
-    </div>
-    <div class="cross">
-      <span>models flow ↓</span>
-      <span>receipts flow ↑</span>
-      <span class="never">PHI crosses never</span>
-    </div>
-    <div class="half home">
-      <h3>🤝 LocalDiabetic — the healers</h3>
-      <p>A private vault in your own home. Reminders to your phone &amp; watch, an on-box AI that
-         organizes your records and preps your doctor visits.</p>
-      <p class="rule">Records <b>never leave</b> the box.</p>
-    </div>
+  <div class="monorow" style="justify-content:center;color:#7d8893;margin-top:30px;flex-wrap:wrap;gap:6px 18px">
+   <span><span style="color:#2FB67A">●</span> LIVE <span style="color:#7d8893">assistant · education · organization</span></span>
+   <span style="color:#3a4654">|</span>
+   <span><span style="color:#e7c98a">◐</span> BUILDING <span style="color:#7d8893">ride network · shoe-shipping</span></span>
   </div>
-  <p class="enforce">Not a policy. <b>Enforced in code:</b> every job carries <code>phi_touched: false</code>,
-     a patient record is physically refused at the boundary, and the chain is tamper-evident.</p>
-</section>
-
-<section id="model" class="section dark">
-  <div class="wrap">
-    <h2>Charity burns the dollar. We plant it.</h2>
-    <div class="model">
-      <div class="col bad">
-        <h4>Ordinary charity</h4>
-        <p>$100 in → ~$15 reaches the need → the rest is gone → back to begging.</p>
-        <p class="big">~$15<small>given, once</small></p>
-      </div>
-      <div class="col good">
-        <h4>The OpenDiabetic endowment</h4>
-        <p>$100 buys a GPU → it earns on the marketplace → net recycles into free gives → the GPU keeps
-           working, then recycles to next-gen.</p>
-        <p class="big">~$300+<small>given, and the asset lives on</small></p>
-      </div>
-    </div>
-    <p class="line">Not a warehouse — <b>a hive.</b> Donors host their own rigs at home; we route the work.
-       Vendors fulfill needs in-kind. Every gift, every dollar earned, every give and every job is a
-       receipt anyone can recompute in their own browser at <a href="https://diabeticledger.com">diabeticledger.com</a>.</p>
+ </div></section><section style="background:#F3ECDD"><div class="wrap" style="max-width:1000px;text-align:center;padding:80px 24px">
+ <div class="kick">The thesis</div>
+ <div style="font-weight:800;font-size:clamp(28px,4.6vw,52px);letter-spacing:-1.4px;line-height:1.12;color:#2B2118">I live the disease. We own the <span style="color:#D99A2B">machines</span>. So we point the machines at the <span style="color:#D99A2B">disease</span>.</div>
+</div></section><section id="why" style="background:#FBF7EF"><div class="wrap" style="max-width:860px;padding:114px 24px">
+ <div style="text-align:center;margin-bottom:40px">
+  <div class="kick">02 <span style="color:#5d6b78">—</span> The why</div>
+  <h2 class="h2" style="color:#2B2118;font-size:clamp(30px,4.4vw,48px)">Built from my own scars.<br><span style="color:#D99A2B">Powered by NVIDIA Blackwell.</span></h2>
+ </div>
+ <div style="max-width:660px;margin:0 auto;text-align:left">
+  <p style="font-size:19px;line-height:1.74;color:#2B2118;margin:0 0 20px"><b>I'm Donovan. I'm a Type 1 diabetic</b> — and I built OpenDiabetic from the inside of it.</p>
+  <p style="font-size:18px;line-height:1.74;color:#473b2d;margin:0 0 20px">I know this disease the way you only know it once it's taken something. I've lost toes. More than a dozen surgeries on my feet. This month: fifteen days in a hospital bed, four surgeries, two more toes gone. I'm healing as I write this. Not for sympathy — because it's the whole reason this exists, and because if you're living it too, you are not the only one.</p>
+  <p style="font-size:18px;line-height:1.74;color:#473b2d;margin:0 0 20px">Here's the other half — the half that wins:</p>
+  <p style="font-size:18px;line-height:1.74;color:#473b2d;margin:0 0 20px">We know compute. Our own rigs, powered by NVIDIA Blackwell. Not rentals — our silicon, our electrons. We cook best-in-class models and we run the machines around the clock. This is the thing we're cracked at.</p>
+  <p style="font-size:18px;line-height:1.74;color:#473b2d;margin:0 0 20px">And we built it the hard way: no VC. Self-funded. Real skin in the game. Nobody owns this mission but the people it serves — no investor to answer to, no exit to chase. I put my own money and my own machines behind it, the same way I've put my own body through this disease.</p>
+ </div>
+ <div style="max-width:880px;margin:14px auto 14px;text-align:center">
+  <div style="width:46px;height:3px;background:#F2B441;border-radius:2px;margin:0 auto 22px"></div>
+  <div style="font-weight:800;font-size:clamp(26px,3.7vw,42px);letter-spacing:-1px;line-height:1.18;color:#2B2118">I live the disease. We own the <span style="color:#D99A2B">machines</span>. So we point the machines at the <span style="color:#D99A2B">disease</span>.</div>
+ </div>
+ <div style="max-width:660px;margin:0 auto;text-align:left">
+  <p style="font-size:18px;line-height:1.74;color:#473b2d;margin:0 0 20px">We are the first dedicated diabetic-compute-engine — and the engine earns. The proceeds come back as the things people actually need: a ride to the doctor. Shoes that fit. The right thing, right time, no charge, no strings. We give people what they need, not what we happen to have. Dignity, not charity.</p>
+  <p style="font-size:18px;line-height:1.74;color:#473b2d;margin:0 0 20px">Compute in, help out — every single day. The gift that keeps on giving.</p>
+ </div>
+ <div style="max-width:880px;margin:14px auto 14px;text-align:center">
+  <div style="width:46px;height:3px;background:#F2B441;border-radius:2px;margin:0 auto 22px"></div>
+  <div style="font-weight:800;font-size:clamp(28px,4.2vw,48px);letter-spacing:-1.2px;line-height:1.12;color:#D99A2B">Win big — every day. Not someday.</div>
+ </div>
+ <div style="max-width:660px;margin:0 auto 36px;text-align:left">
+  <p style="font-size:18px;line-height:1.74;color:#473b2d;margin:0 0 20px">I'm not waiting on a cure to start living, and neither should you. Every day you take care of yourself is a win. We've got the machines, the mission, and the scars to mean it. Let's stack the wins together.</p>
+ </div>
+ <div style="display:flex;align-items:center;justify-content:center;gap:14px">
+  <svg width="42" height="46" viewBox="0 0 120 132" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible"><path d="M54 20 C48 6 41 3 34 5" stroke="#2B2118" stroke-width="4.2" stroke-linecap="round"/><path d="M66 20 C72 6 79 3 86 5" stroke="#2B2118" stroke-width="4.2" stroke-linecap="round"/><circle cx="33" cy="5" r="4.4" fill="#F2B441" stroke="#2B2118" stroke-width="3"/><circle cx="87" cy="5" r="4.4" fill="#F2B441" stroke="#2B2118" stroke-width="3"/><ellipse cx="36" cy="54" rx="19" ry="26" fill="#FCE4B0" stroke="#2B2118" stroke-width="4.2" transform="rotate(-24 36 54)"/><ellipse cx="84" cy="54" rx="19" ry="26" fill="#FCE4B0" stroke="#2B2118" stroke-width="4.2" transform="rotate(24 84 54)"/><rect x="40" y="44" width="40" height="72" rx="20" fill="#F2B441" stroke="#2B2118" stroke-width="4.2"/><g clip-path="url(#b3)"><rect x="36" y="66" width="48" height="12" fill="#2B2118"/><rect x="36" y="90" width="48" height="12" fill="#2B2118"/></g><clipPath id="b3"><rect x="40" y="44" width="40" height="72" rx="20"/></clipPath><circle cx="60" cy="31" r="17" fill="#2B2118"/><circle cx="53" cy="29" r="3.4" fill="#FBF7EF"/><circle cx="67" cy="29" r="3.4" fill="#FBF7EF"/></svg><div style="text-align:left"><div style="font-size:16.5px;font-weight:800;color:#2B2118">— Donovan, founder</div><div style="font-size:13.5px;color:#6b5e4f">building one day at a time 🐝</div></div>
+ </div>
+</div></section><section style="background:#F3ECDD"><div class="wrap" style="max-width:1140px;padding:104px 24px">
+ <div style="text-align:center;margin-bottom:44px"><div class="kick">03 <span style="color:#5d6b78">—</span> What it is</div>
+  <h2 class="h2" style="color:#2B2118">The foundation that makes LocalDiabetic <span style="color:#D99A2B">possible</span></h2>
+  <p class="lede">OpenDiabetic doesn't ship to your door — it makes sure what reaches you is worth trusting. The gatekeeper behind the warm front door.</p></div>
+ <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(326px,1fr));gap:18px">
+  <div class="card"><div class="cardtop"><span class="itile"><svg viewBox="0 0 24 24" fill="none" stroke="#D99A2B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><polyline points="8 7 3 12 8 17"/><polyline points="16 7 21 12 16 17"/><line x1="13" y1="5" x2="11" y2="19"/></svg></span><span class="flag flag-live"><span class="dot" style="background:#2FB67A"></span>LIVE</span></div><h3>Open-source</h3><p>Built in the open. The work is visible, forkable, and auditable — no black box.</p></div>
+  <div class="card"><div class="cardtop"><span class="itile"><svg viewBox="0 0 24 24" fill="none" stroke="#D99A2B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="flag flag-live"><span class="dot" style="background:#2FB67A"></span>LIVE</span></div><h3>DefendableOS</h3><p>Proof of execution. Every claim is receipted and re-derivable. Show the math, never trust-me-bro.</p></div>
+  <div class="card"><div class="cardtop"><span class="itile"><svg viewBox="0 0 24 24" fill="none" stroke="#D99A2B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg></span><span class="flag flag-live"><span class="dot" style="background:#2FB67A"></span>LIVE</span></div><h3>R&amp;D on our own compute</h3><p>Our rigs, our models. We do the research on silicon we own — pointed at diabetes.</p></div>
+  <div class="card"><div class="cardtop"><span class="itile"><svg viewBox="0 0 24 24" fill="none" stroke="#D99A2B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M8 7h7M8 11h7"/></svg></span><span class="flag flag-live"><span class="dot" style="background:#2FB67A"></span>LIVE</span></div><h3>Education board</h3><p>Reviews, builds, and vets what gets made — so the deliverables are sound before they ship.</p></div>
+  <div class="card"><div class="cardtop"><span class="itile"><svg viewBox="0 0 24 24" fill="none" stroke="#D99A2B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></span><span class="flag flag-build"><span class="dot" style="background:#D99A2B"></span>BUILDING</span></div><h3>Bounty engine</h3><p>Build-by-design → fundraise → give-back. Aligned competitions that fund real resources.</p></div>
+  <div class="card gate"><div class="cardtop"><span class="itile gate-itile"><svg viewBox="0 0 24 24" fill="none" stroke="#F2B441" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span><span class="flag" style="background:rgba(242,180,65,.12);border-color:rgba(242,180,65,.4);color:#e7c98a">THE GATE</span></div><h3 style="color:#fff">Verified · vetted · defendable</h3><p style="color:#b8a98f">Nothing reaches the people that didn't pass the gate. Quality is the culture.</p></div>
+ </div>
+</div></section><section id="engine" style="background:#0B0F14"><div class="glow" style="animation-duration:8s"></div>
+ <div class="wrap" style="max-width:1080px;padding:108px 24px;position:relative">
+  <div style="text-align:center;margin-bottom:40px"><div class="kick">04 <span style="color:#5d6b78">—</span> The engine</div>
+   <h2 class="h2" style="color:#E8EEF5">Our own silicon. Pointed at the <span style="color:#F2B441">disease</span>.</h2>
+   <p class="lede lede-d">NVIDIA Blackwell rigs on our own floor, running around the clock. Not rented — owned. The machines earn; the people win.</p></div>
+  <div class="two" style="display:grid;grid-template-columns:1.1fr 1fr;gap:22px;align-items:stretch">
+   <div class="rig">
+    <div style="display:flex;align-items:center;gap:10px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#e7c98a;letter-spacing:.1em"><svg viewBox="0 0 24 24" fill="none" stroke="#D99A2B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg> THE RIG</div>
+    <div class="bars"><span class="bar" style="animation-delay:0.0s"></span><span class="bar" style="animation-delay:0.3s"></span><span class="bar" style="animation-delay:0.6s"></span><span class="bar" style="animation-delay:0.9s"></span><span class="bar" style="animation-delay:1.2s"></span><span class="bar" style="animation-delay:1.5s"></span><span class="bar" style="animation-delay:1.8s"></span><span class="bar" style="animation-delay:2.1s"></span></div>
+    <div class="specrow" style="border-top:0"><span class="l">fabric</span><span style="color:#E8EEF5">NVIDIA Blackwell</span></div>
+    <div class="specrow"><span class="l">silicon</span><span style="color:#E8EEF5">our own floor</span></div>
+    <div class="specrow"><span class="l">uptime</span><span style="color:#2FB67A">around the clock</span></div>
+    <div class="specrow"><span class="l">rented</span><span style="color:#E8EEF5">none</span></div>
+    <div class="specrow"><span class="l">funded by</span><span style="color:#F2B441">compute income · no VC</span></div>
+   </div>
+   <div style="display:flex;flex-direction:column;gap:14px;justify-content:center">
+    <div style="background:rgba(255,255,255,.03);border:1px solid #1F2A36;border-radius:18px;padding:26px">
+     <h3 style="font-size:21px;font-weight:800;color:#fff;margin:0 0 8px">The machines earn</h3>
+     <p style="font-size:15.5px;color:#9aa7b3;margin:0;line-height:1.55">Compute is real value. We sell it the honest way and keep the lights on without a hand out.</p></div>
+    <div style="text-align:center;color:#F2B441;font-size:24px">↓</div>
+    <div style="background:rgba(242,180,65,.10);border:1px solid rgba(242,180,65,.3);border-radius:18px;padding:26px">
+     <h3 style="font-size:21px;font-weight:800;color:#fff;margin:0 0 8px">The people win</h3>
+     <p style="font-size:15.5px;color:#cdbf9f;margin:0;line-height:1.55">Compute in, help out. Every day. The proceeds become rides, shoes, and the right thing at the right time.</p></div>
+   </div>
   </div>
-</section>
-
-<section id="live" class="wrap section">
-  <h2>This isn't a deck. It's live today.</h2>
-  <p class="sub">Running on real hardware right now — most of it on the founder's own box, for the founder,
-     who is himself a Type&nbsp;1 diabetic.</p>
-  <div class="cards">
-    <div class="card"><div class="dot"></div><h3>The Vault + the Nudge</h3>
-      <p>A private records vault on a home NAS, pushing 24/7 reminders — meds, foot checks, appointments —
-         to an iPhone over the member's <b>own sovereign domain</b>. Plus a family safety net.</p></div>
-    <div class="card"><div class="dot"></div><h3>The Hive + an edge worker</h3>
-      <p>A node registry, a hash-chained compute ledger, and a Jetson edge box leasing jobs autonomously —
-         the firewall refusing any record at the boundary.</p></div>
-    <div class="card"><div class="dot"></div><h3>On-box AI</h3>
-      <p>An open model on the edge organizes the vault and preps real doctor-visit questions —
-         <b>without ever calling the cloud. PHI never leaves home.</b></p></div>
-    <div class="card"><div class="dot"></div><h3>diabeticledger.com</h3>
-      <p>A public giving ledger that re-verifies every link <b>in your browser</b>. The anti-rug-pull,
-         shipped. <a href="https://diabeticledger.com">See it →</a></p></div>
+ </div></section><section style="background:#FBF7EF"><div class="wrap" style="max-width:980px;padding:108px 24px;text-align:center">
+ <div class="kick">05 <span style="color:#5d6b78">—</span> The model</div>
+ <h2 style="font-weight:800;font-size:clamp(30px,4.8vw,52px);letter-spacing:-1.4px;line-height:1.1;color:#2B2118">Give people what they need, not what you <span style="color:#D99A2B">have</span>.</h2>
+ <p class="lede">It costs the people nothing — no charge, no strings. Self-funded, no VC, no investor to answer to. Dignity, not charity.</p>
+ <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin:40px 0 28px;text-align:left">
+  <div class="mcard"><div class="cardtop"><span class="itile"><svg viewBox="0 0 24 24" fill="none" stroke="#D99A2B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M5 13l1.5-4.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 13v5h-2v-2H7v2H5z"/><circle cx="8" cy="16" r="1"/><circle cx="16" cy="16" r="1"/></svg></span><span class="flag flag-build"><span class="dot" style="background:#D99A2B"></span>BUILDING</span></div><h4>A ride to the doctor</h4><p>Getting there shouldn't be the thing that stops care. We close that gap.</p></div>
+  <div class="mcard"><div class="cardtop"><span class="itile"><svg viewBox="0 0 24 24" fill="none" stroke="#D99A2B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M3 16h15a3 3 0 0 0 3-3c0-1-1-1.6-2.5-2-2-.5-3.5-1.5-5-3.5L12 9 8 7v9H3z"/><path d="M3 16v2h18v-2"/></svg></span><span class="flag flag-build"><span class="dot" style="background:#D99A2B"></span>BUILDING</span></div><h4>Shoes that fit</h4><p>Diabetic footwear, shipped. Your feet are worth protecting — every day.</p></div>
+  <div class="mcard"><div class="cardtop"><span class="itile"><svg viewBox="0 0 24 24" fill="none" stroke="#D99A2B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M3 12h4l2-5 3 9 2-4h7"/></svg></span><span class="flag flag-build"><span class="dot" style="background:#D99A2B"></span>BUILDING</span></div><h4>The full continuum</h4><p>The right thing at the right time, across the whole journey — no charge.</p></div>
+ </div>
+ <div style="background:#FBF0D8;border:1px solid #F0DCA8;border-radius:14px;padding:20px 24px;font-size:16px;color:#2B2118;line-height:1.55">🐝 Funded by compute income, recycled as net straight back into the people. <b style="color:#D99A2B">The gift that keeps on giving.</b></div>
+</div></section><section style="background:#0B0F14"><div class="wrap" style="max-width:1080px;padding:104px 24px">
+ <div style="text-align:center"><div class="kick">06 <span style="color:#5d6b78">—</span> The flywheel</div>
+  <h2 class="h2" style="color:#E8EEF5">Compute in, <span style="color:#F2B441">help</span> out — on a loop</h2>
+  <p class="lede lede-d">No exit, no extraction. The proceeds of the machine come back to the people, and the people keep it spinning.</p></div>
+ <div class="fly">
+  <svg viewBox="0 0 600 600" style="position:absolute;inset:0;width:100%;height:100%">
+   <circle cx="300" cy="300" r="220" fill="none" stroke="rgba(242,180,65,.34)" stroke-width="2" stroke-dasharray="3 9"/>
+   <g transform="translate(410.0,109.5) rotate(30)"><polygon points="0,-7 15,0 0,7" fill="#F2B441"/></g><g transform="translate(520.0,300.0) rotate(90)"><polygon points="0,-7 15,0 0,7" fill="#F2B441"/></g><g transform="translate(410.0,490.5) rotate(150)"><polygon points="0,-7 15,0 0,7" fill="#F2B441"/></g><g transform="translate(190.0,490.5) rotate(210)"><polygon points="0,-7 15,0 0,7" fill="#F2B441"/></g><g transform="translate(80.0,300.0) rotate(270)"><polygon points="0,-7 15,0 0,7" fill="#F2B441"/></g><g transform="translate(190.0,109.5) rotate(330)"><polygon points="0,-7 15,0 0,7" fill="#F2B441"/></g>
+  </svg>
+  <div class="fcenter"><svg width="62" height="68" viewBox="0 0 120 132" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible"><path d="M54 20 C48 6 41 3 34 5" stroke="#2B2118" stroke-width="4.2" stroke-linecap="round"/><path d="M66 20 C72 6 79 3 86 5" stroke="#2B2118" stroke-width="4.2" stroke-linecap="round"/><circle cx="33" cy="5" r="4.4" fill="#F2B441" stroke="#2B2118" stroke-width="3"/><circle cx="87" cy="5" r="4.4" fill="#F2B441" stroke="#2B2118" stroke-width="3"/><ellipse cx="36" cy="54" rx="19" ry="26" fill="#FCE4B0" stroke="#2B2118" stroke-width="4.2" transform="rotate(-24 36 54)"/><ellipse cx="84" cy="54" rx="19" ry="26" fill="#FCE4B0" stroke="#2B2118" stroke-width="4.2" transform="rotate(24 84 54)"/><rect x="40" y="44" width="40" height="72" rx="20" fill="#F2B441" stroke="#2B2118" stroke-width="4.2"/><g clip-path="url(#b4)"><rect x="36" y="66" width="48" height="12" fill="#2B2118"/><rect x="36" y="90" width="48" height="12" fill="#2B2118"/></g><clipPath id="b4"><rect x="40" y="44" width="40" height="72" rx="20"/></clipPath><circle cx="60" cy="31" r="17" fill="#2B2118"/><circle cx="53" cy="29" r="3.4" fill="#FBF7EF"/><circle cx="67" cy="29" r="3.4" fill="#FBF7EF"/></svg><div style="font-family:'JetBrains Mono',monospace;color:#F2B441;font-weight:700;margin-top:6px;letter-spacing:.1em">WIN BIG</div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#7d8893;margin-top:3px">our compute, recycled as net</div></div>
+  <div class="fnode" style="left:50%;top:13.33%"><span class="fnum">01</span><span class="flbl">Our compute</span></div><div class="fnode" style="left:81.75%;top:31.67%"><span class="fnum">02</span><span class="flbl">R&D</span></div><div class="fnode fnode-hi" style="left:81.75%;top:68.33%"><span class="fnum">03</span><span class="flbl">Bounties</span><span class="fsub">build · fundraise · give-back</span></div><div class="fnode" style="left:50%;top:86.67%"><span class="fnum">04</span><span class="flbl">Vetted resources</span></div><div class="fnode" style="left:18.25%;top:68.33%"><span class="fnum">05</span><span class="flbl">The people</span></div><div class="fnode" style="left:18.25%;top:31.67%"><span class="fnum">06</span><span class="flbl">More compute</span></div>
+ </div>
+</div></section><section id="trust" style="background:#FBF7EF"><div class="wrap" style="max-width:1080px;padding:108px 24px">
+ <div style="text-align:center;margin-bottom:40px"><div class="kick">07 <span style="color:#5d6b78">—</span> The trust layer</div>
+  <h2 class="h2" style="color:#2B2118">Your records never leave your <span style="color:#D99A2B">home</span></h2>
+  <p class="lede">Models flow down, receipts flow up — your data never crosses. The math is visible because there's no cap table to hide.</p></div>
+ <div class="fw">
+  <div class="fwcol">
+   <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px"><svg viewBox="0 0 24 24" fill="none" stroke="#D99A2B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M12 3l7 3v6c0 5-3.5 7.5-7 9-3.5-1.5-7-4-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg><b style="color:#2B2118;font-size:17px">Your home</b></div>
+   <p style="font-size:14px;color:#6b5e4f;margin:0 0 16px;line-height:1.5">LocalDiabetic, on a box in your house. PHI stays put.</p>
+   <div class="monorow"><span class="sq" style="background:#E2524F"></span>glucose_logs <span style="color:#9b8d7b">· PHI</span></div>
+   <div class="monorow"><span class="sq" style="background:#E2524F"></span>foot_photos <span style="color:#9b8d7b">· PHI</span></div>
+   <div class="monorow"><span class="sq" style="background:#E2524F"></span>medications <span style="color:#9b8d7b">· PHI</span></div>
   </div>
-</section>
-
-<section id="rent" class="section dark">
-  <div class="wrap">
-    <h2>Rent the hive — sovereign compute that funds the mission</h2>
-    <p class="sub">The same owned rigs that cook the diabetic models are on Vast.ai. Rent ours — or use our
-       referral — and the income recycles straight into free help for diabetics. The compute endowment, working.</p>
-    <div class="cards">
-      <div class="card"><h3>🖥️ swarmrails</h3><p>2× RTX PRO 6000 Blackwell · 194&nbsp;GB VRAM<br>
-        <code>Vast ID 141205</code> · cooking right now</p></div>
-      <div class="card"><h3>🖥️ smash</h3><p>RTX 5090<br><code>Vast ID 84859</code></p></div>
-      <div class="card"><h3>🖥️ defendable</h3><p>RTX 5090<br><code>Vast ID 136859</code></p></div>
-    </div>
-    <p class="line"><a class="btn" href="https://cloud.vast.ai/?ref_id=468981" target="_blank" rel="noopener">Rent on Vast.ai →</a>
-       &nbsp; Live availability &amp; pricing on Vast — our rigs cook 24/7, so they come and go. Every rental funds the give-engine.</p>
+  <div class="fwmid">
+   <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.18em;color:#e7c98a">FIREWALL</div>
+   <div class="monorow" style="color:#2FB67A">models →</div>
+   <div class="monorow" style="color:#2FB67A">← receipts</div>
+   <div style="width:40px;height:40px;border:2px solid #E2524F;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#E2524F;font-size:20px">⦸</div>
+   <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#E2524F;text-align:center">PHI never crosses</div>
   </div>
-</section>
-
-<section class="section give-what">
-  <div class="wrap">
-    <h2>Give people what they need — not what you have.</h2>
-    <p class="sub">The compute earns; the net comes back to the people, free of charge, no strings.
-      Honest status: the <b>daily foot-care &amp; meds nudges and the home vault are live today</b>;
-      the <b>ride network, shoe-shipping and benefits card are in build</b> — designed, funded by the
-      engine, not yet a live service. We label what ships before it ships.</p>
-    <div class="needs">
-      <div><b>👣 Feet First</b><span>Diabetic shoes, rides to podiatry, daily foot-care nudges — aimed at the highest-stakes, most preventable complication.</span></div>
-      <div><b>💉 End the Ration</b><span>Supplies and predictive reorder nudges that kill the cost trigger before a dose gets skipped.</span></div>
-      <div><b>🏠 A vault of their own</b><span>A NAS + edge box, set up free by a paid local neighbor. Records organized, private, theirs.</span></div>
-      <div><b>🚗 Real-world help</b><span>Rides, healthy food, recovery support, a benefits card on Rx, medical, legal and insurance.</span></div>
-    </div>
+  <div class="fwcol" style="background:#F3ECDD">
+   <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px"><svg width="26" height="29" viewBox="0 0 120 132" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible"><path d="M54 20 C48 6 41 3 34 5" stroke="#2B2118" stroke-width="4.2" stroke-linecap="round"/><path d="M66 20 C72 6 79 3 86 5" stroke="#2B2118" stroke-width="4.2" stroke-linecap="round"/><circle cx="33" cy="5" r="4.4" fill="#F2B441" stroke="#2B2118" stroke-width="3"/><circle cx="87" cy="5" r="4.4" fill="#F2B441" stroke="#2B2118" stroke-width="3"/><ellipse cx="36" cy="54" rx="19" ry="26" fill="#FCE4B0" stroke="#2B2118" stroke-width="4.2" transform="rotate(-24 36 54)"/><ellipse cx="84" cy="54" rx="19" ry="26" fill="#FCE4B0" stroke="#2B2118" stroke-width="4.2" transform="rotate(24 84 54)"/><rect x="40" y="44" width="40" height="72" rx="20" fill="#F2B441" stroke="#2B2118" stroke-width="4.2"/><g clip-path="url(#b5)"><rect x="36" y="66" width="48" height="12" fill="#2B2118"/><rect x="36" y="90" width="48" height="12" fill="#2B2118"/></g><clipPath id="b5"><rect x="40" y="44" width="40" height="72" rx="20"/></clipPath><circle cx="60" cy="31" r="17" fill="#2B2118"/><circle cx="53" cy="29" r="3.4" fill="#FBF7EF"/><circle cx="67" cy="29" r="3.4" fill="#FBF7EF"/></svg><b style="color:#2B2118;font-size:17px">The hive · OpenDiabetic</b></div>
+   <p style="font-size:14px;color:#6b5e4f;margin:0 0 16px;line-height:1.5">The compute foundation. Sees models and receipts — never you.</p>
+   <div class="monorow"><span class="sq" style="background:#2FB67A"></span>model_v4.gguf <span style="color:#2FB67A">↓</span></div>
+   <div class="monorow"><span class="sq" style="background:#2FB67A"></span>receipt: ok <span style="color:#2FB67A">↑</span></div>
+   <div class="monorow" style="border:1px dashed #ece3d2;border-radius:9px;padding:7px 10px;margin-top:8px">sig 0xA7F3…9C2 · verified ✓</div>
   </div>
-</section>
-
-<section id="give" class="section dark give">
-  <div class="wrap">
-    <h2>Ways to give</h2>
-    <p class="sub">Cash, compute, or a device — every form works, and every one is planted, not burned.</p>
-    <div class="cards give-cards">
-      <div class="card"><h3>💵 Cash</h3><p>We buy exactly what a member needs — or a rig that earns for years to fund more gives.</p></div>
-      <div class="card"><h3>🖥️ Compute</h3><p>Donate a GPU; it goes on the marketplace as a real worker and funds the give-engine.</p></div>
-      <div class="card"><h3>⌚ A device</h3><p>An Apple Watch, an iPhone, a NAS — shipped to a member who needs it this week.</p></div>
-      <div class="card"><h3>🐝 Host a rig</h3><p>Keep your GPU at home and let us route open work to it. The firewall keeps it safe.</p></div>
-    </div>
-    <form id="contactForm" class="contact-form">
-      <div class="row">
-        <label>Name<input name="name" autocomplete="name" required></label>
-        <label>Email<input name="email" type="email" autocomplete="email" required></label>
-      </div>
-      <label>I'd like to
-        <select name="topic">
-          <option>Give back</option><option>Host a rig</option>
-          <option>Partner with OpenDiabetic</option><option>Something else</option>
-        </select></label>
-      <label>Message<textarea name="message" rows="4" required placeholder="Tell us how you'd like to help."></textarea></label>
-      <input type="text" name="company" tabindex="-1" autocomplete="off" aria-hidden="true" class="hp">
-      <button type="submit">Send →</button>
-      <p class="formnote" id="contactResult" role="status"></p>
-    </form>
-    <p class="micro center">Or reach us directly: <a href="mailto:build@opendiabetic.com">build@opendiabetic.com</a></p>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="wrap">
-    <img src="assets/wordmark.svg" alt="OpenDiabetic" height="40">
-    <p>OpenDiabetic is the hive · LocalDiabetic is the healers · DiabeticLedger is the proof.</p>
-    <p class="links">
-      <a href="https://diabeticdocs.com">Docs</a> ·
-      <a href="https://diabeticnode.com">Node</a> ·
-      <a href="https://diabeticdatasets.com">Datasets</a> ·
-      <a href="https://diabeticmodels.com">Models</a> ·
-      <a href="https://diabetictruth.org">Truth</a> ·
-      <a href="https://diabeticledger.com">Ledger</a> ·
-      <a href="https://diabeticdonation.com">Donation</a> ·
-      <a href="https://localdiabetic.com">LocalDiabetic</a> ·
-      <a href="mailto:build@opendiabetic.com">build@opendiabetic.com</a>
-    </p>
-    <p class="contact">HQ · Jupiter, Florida · <a href="tel:+15615327120">561.532.7120</a> ·
-      <a href="https://x.com/opendiabetics" rel="me">@opendiabetics</a> · <a href="https://huggingface.co/SwarmandBee" rel="me">🤗 Hugging Face</a></p>
-    <p class="motto">Give people what they need, not what you have. We are math and code.</p>
-    <p class="legal">Owned &amp; operated by <b>Swarm and Bee LLC</b> · DBA Swarm &amp; Bee AI · Florida<br>
-      UEI L9EXVH9L9VU6 · CAGE 20YM3 · D-U-N-S 138652395 · Registered &amp; active in SAM.gov<br>
-      &copy; 2026 DefendableOS · Proof of Execution.</p>
-  </div>
-</footer>
-
-<script>
-const f = document.getElementById("contactForm");
-f && f.addEventListener("submit", async e => {
-  e.preventDefault();
-  const r = document.getElementById("contactResult"), btn = f.querySelector("button");
-  r.className = "formnote"; r.textContent = "Sending…"; btn.disabled = true;
-  const body = { name:f.name.value, email:f.email.value, topic:f.topic.value, message:f.message.value, company:f.company.value };
-  try {
-    const res = await fetch("/api/contact", { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(body) });
-    const out = await res.json();
-    if (res.ok && out.ok){ r.className="formnote ok"; r.textContent="Thank you 🐝 we got it — we'll be in touch."; f.reset(); }
-    else { r.className="formnote bad"; r.textContent = out.error || "Couldn't send — please email build@opendiabetic.com."; }
-  } catch { r.className="formnote bad"; r.textContent="Couldn't reach us — please email build@opendiabetic.com."; }
-  btn.disabled = false;
-});
-</script>
-</body>
-</html>
+ </div>
+ <div style="text-align:center;margin-top:24px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#6b5e4f"><span style="color:#1f8f5d">verified</span> · <span style="color:#1f8f5d">vetted</span> · <span style="color:#1f8f5d">defendable</span> · proof of execution</div>
+</div></section><section id="sibling" style="background:#F3ECDD"><div class="wrap" style="max-width:1080px;padding:104px 24px">
+ <div style="text-align:center"><div class="kick">08 <span style="color:#5d6b78">—</span> One house</div>
+  <h2 class="h2" style="color:#2B2118">OpenDiabetic &amp; <span style="color:#D99A2B">LocalDiabetic</span></h2>
+  <p class="lede">Two surfaces, one mission. The foundation and the front door.</p></div>
+ <div class="house">
+  <div class="hcard od"><svg width="34" height="37" viewBox="0 0 120 132" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible"><path d="M54 20 C48 6 41 3 34 5" stroke="#E8EEF5" stroke-width="4.2" stroke-linecap="round"/><path d="M66 20 C72 6 79 3 86 5" stroke="#E8EEF5" stroke-width="4.2" stroke-linecap="round"/><circle cx="33" cy="5" r="4.4" fill="#F2B441" stroke="#E8EEF5" stroke-width="3"/><circle cx="87" cy="5" r="4.4" fill="#F2B441" stroke="#E8EEF5" stroke-width="3"/><ellipse cx="36" cy="54" rx="19" ry="26" fill="#3a3526" stroke="#E8EEF5" stroke-width="4.2" transform="rotate(-24 36 54)"/><ellipse cx="84" cy="54" rx="19" ry="26" fill="#3a3526" stroke="#E8EEF5" stroke-width="4.2" transform="rotate(24 84 54)"/><rect x="40" y="44" width="40" height="72" rx="20" fill="#F2B441" stroke="#E8EEF5" stroke-width="4.2"/><g clip-path="url(#b6)"><rect x="36" y="66" width="48" height="12" fill="#E8EEF5"/><rect x="36" y="90" width="48" height="12" fill="#E8EEF5"/></g><clipPath id="b6"><rect x="40" y="44" width="40" height="72" rx="20"/></clipPath><circle cx="60" cy="31" r="17" fill="#E8EEF5"/><circle cx="53" cy="29" r="3.4" fill="#0B0F14"/><circle cx="67" cy="29" r="3.4" fill="#0B0F14"/></svg>
+   <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.12em;color:#e7c98a;margin:14px 0 10px">THE FOUNDATION · THE GATEKEEPER</div>
+   <p style="color:#9aa7b3;font-size:15px;line-height:1.6;margin:0">OpenDiabetic builds the compute, runs the R&amp;D, and guards the gate — so every deliverable is verified, vetted, and defendable.</p></div>
+  <div style="text-align:center;color:#F2B441"><div style="font-size:26px">⇌</div><div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:#7d8893;margin-top:4px;letter-spacing:.12em">SIBLINGS</div></div>
+  <div class="hcard ld"><svg width="34" height="37" viewBox="0 0 120 132" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible"><path d="M54 20 C48 6 41 3 34 5" stroke="#2B2118" stroke-width="4.2" stroke-linecap="round"/><path d="M66 20 C72 6 79 3 86 5" stroke="#2B2118" stroke-width="4.2" stroke-linecap="round"/><circle cx="33" cy="5" r="4.4" fill="#F2B441" stroke="#2B2118" stroke-width="3"/><circle cx="87" cy="5" r="4.4" fill="#F2B441" stroke="#2B2118" stroke-width="3"/><ellipse cx="36" cy="54" rx="19" ry="26" fill="#FCE4B0" stroke="#2B2118" stroke-width="4.2" transform="rotate(-24 36 54)"/><ellipse cx="84" cy="54" rx="19" ry="26" fill="#FCE4B0" stroke="#2B2118" stroke-width="4.2" transform="rotate(24 84 54)"/><rect x="40" y="44" width="40" height="72" rx="20" fill="#F2B441" stroke="#2B2118" stroke-width="4.2"/><g clip-path="url(#b7)"><rect x="36" y="66" width="48" height="12" fill="#2B2118"/><rect x="36" y="90" width="48" height="12" fill="#2B2118"/></g><clipPath id="b7"><rect x="40" y="44" width="40" height="72" rx="20"/></clipPath><circle cx="60" cy="31" r="17" fill="#2B2118"/><circle cx="53" cy="29" r="3.4" fill="#FBF7EF"/><circle cx="67" cy="29" r="3.4" fill="#FBF7EF"/></svg>
+   <div style="font-size:18px;margin:14px 0 0"><span style="font-weight:600;color:#2B2118">Local</span><span style="font-weight:800;color:#D99A2B">Diabetic</span></div>
+   <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.12em;color:#D99A2B;margin:8px 0 10px">THE WARM FRONT DOOR</div>
+   <p style="color:#6b5e4f;font-size:15px;line-height:1.6;margin:0 0 12px">The home vault, the bee on your shoulder. Simple, warm, built for real life.</p>
+   <a href="https://localdiabetic.com" target="_blank" rel="noopener" style="color:#D99A2B;font-weight:700;text-decoration:underline">Visit LocalDiabetic →</a></div>
+ </div>
+</div></section><section id="start" style="background:#FBF7EF"><div class="wrap" style="max-width:1080px;padding:108px 24px">
+ <div style="text-align:center;margin-bottom:40px"><div class="kick">09 <span style="color:#5d6b78">—</span> Get involved</div>
+  <h2 class="h2" style="color:#2B2118">Pick up a corner of the <span style="color:#D99A2B">load</span></h2>
+  <p class="lede">Try it, give compute, run a bounty, or back the mission. Every hand helps carry the day.</p></div>
+ <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:18px">
+  <a class="inv inv-dark" href="https://opendiabetic.com/try" target="_blank" rel="noopener"><span class="itile"><svg viewBox="0 0 24 24" fill="none" stroke="#D99A2B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></span><h3>Try it</h3><p>The assistant and the education board are live today.</p><span class="invlink">Open the assistant →</span></a>
+  <a class="inv" href="mailto:build@opendiabetic.com?subject=Contribute%20compute"><span class="itile"><svg viewBox="0 0 24 24" fill="none" stroke="#D99A2B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg></span><h3>Contribute compute</h3><p>Point a GPU or spare cycles at the engine — cycles become care.</p><span class="invlink">Email us →</span></a>
+  <a class="inv" href="mailto:build@opendiabetic.com?subject=Join%20a%20bounty"><span class="itile"><svg viewBox="0 0 24 24" fill="none" stroke="#D99A2B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></span><h3>Join a bounty</h3><p>Build by design, fundraise, give back. Aligned with the mission.</p><span class="invlink">Email us →</span></a>
+  <a class="inv" href="mailto:build@opendiabetic.com?subject=Support%20the%20mission"><span class="itile"><svg viewBox="0 0 24 24" fill="none" stroke="#D99A2B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M3 12h4l2-5 3 9 2-4h7"/></svg></span><h3>Support the mission</h3><p>Help fund a ride, a pair of shoes, the right thing at the right time.</p><span class="invlink">Email us →</span></a>
+ </div>
+ <p style="text-align:center;font-size:13.5px;color:#9b8d7b;margin-top:30px;max-width:680px;margin-left:auto;margin-right:auto;line-height:1.6">OpenDiabetic educates and organizes — it is <b style="color:#6b5e4f">education, not medical advice</b>, and does not replace your doctor. For emergencies, call 911.</p>
+</div></section><footer><div class="in">
+ <div style="display:flex;align-items:center;gap:11px"><svg width="30" height="33" viewBox="0 0 120 132" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible"><path d="M54 20 C48 6 41 3 34 5" stroke="#E8EEF5" stroke-width="4.2" stroke-linecap="round"/><path d="M66 20 C72 6 79 3 86 5" stroke="#E8EEF5" stroke-width="4.2" stroke-linecap="round"/><circle cx="33" cy="5" r="4.4" fill="#F2B441" stroke="#E8EEF5" stroke-width="3"/><circle cx="87" cy="5" r="4.4" fill="#F2B441" stroke="#E8EEF5" stroke-width="3"/><ellipse cx="36" cy="54" rx="19" ry="26" fill="#3a3526" stroke="#E8EEF5" stroke-width="4.2" transform="rotate(-24 36 54)"/><ellipse cx="84" cy="54" rx="19" ry="26" fill="#3a3526" stroke="#E8EEF5" stroke-width="4.2" transform="rotate(24 84 54)"/><rect x="40" y="44" width="40" height="72" rx="20" fill="#F2B441" stroke="#E8EEF5" stroke-width="4.2"/><g clip-path="url(#b8)"><rect x="36" y="66" width="48" height="12" fill="#E8EEF5"/><rect x="36" y="90" width="48" height="12" fill="#E8EEF5"/></g><clipPath id="b8"><rect x="40" y="44" width="40" height="72" rx="20"/></clipPath><circle cx="60" cy="31" r="17" fill="#E8EEF5"/><circle cx="53" cy="29" r="3.4" fill="#0B0F14"/><circle cx="67" cy="29" r="3.4" fill="#0B0F14"/></svg><b style="font-size:19px"><span style="font-weight:600;color:#E8EEF5">Open</span><span style="font-weight:800;color:#F2B441">Diabetic</span></b></div>
+ <p style="color:#9aa7b3;font-size:15px;line-height:1.6;max-width:620px;margin:16px 0 26px">The first dedicated diabetic-compute-engine. Powered by NVIDIA Blackwell, self-funded, built for them. Compute in, help out. 🐝</p>
+ <div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.12em;color:#5d6b78;margin-bottom:10px">THE ECOSYSTEM</div>
+ <div class="eco" style="font-size:14.5px;margin-bottom:18px"><a href="https://localdiabetic.com">localdiabetic.com</a><span class="sepdot">·</span><a href="https://diabeticmodels.com">diabeticmodels.com</a><span class="sepdot">·</span><a href="https://diabeticdatasets.com">diabeticdatasets.com</a><span class="sepdot">·</span><a href="https://diabeticdonate.com">diabeticdonate.com</a><span class="sepdot">·</span><a href="https://diabeticnode.com">diabeticnode.com</a></div>
+ <div style="font-size:14px;color:#9aa7b3;margin-bottom:26px">DefendableOS<span class="sepdot">·</span>Proof of Execution<span class="sepdot">·</span><a href="https://opendiabetic.com/try">opendiabetic.com/try</a></div>
+ <div style="border-top:1px solid #1F2A36;padding-top:22px;font-size:14px;color:#9aa7b3">
+  <a href="mailto:build@opendiabetic.com">build@opendiabetic.com</a><span class="sepdot">·</span><a href="https://x.com/opendiabetic" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" style="vertical-align:-2px"><path d="M18.244 2H21.5l-7.5 8.57L22.5 22h-6.9l-4.86-6.36L5.2 22H1.94l8.02-9.17L1.5 2h7.06l4.39 5.81zm-1.21 18h1.81L7.04 3.9H5.1z"/></svg> @opendiabetic</a><span class="sepdot">·</span>Jupiter, Florida</div>
+ <div style="font-size:13px;color:#5d6b78;margin-top:16px;line-height:1.6">Owned &amp; operated by Swarm and Bee LLC<br>© 2026 · "Give people what they need, not what you have."</div>
+</div></footer></body></html>
