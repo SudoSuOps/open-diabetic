@@ -182,7 +182,7 @@ HEAD=f'''<!doctype html><html lang="en"><head>
 
 HEADER=f'''<header><div class="row">
  <a class="brand" href="/">{bee(30,33)}<b><span style="font-weight:600;color:{INKT}">Open</span><span style="font-weight:800;color:{HONEY}">Diabetic</span></b></a>
- <nav><a href="#why">The why</a><a href="#engine">The engine</a><a href="#trust">Trust</a><a href="#sibling">LocalDiabetic</a>
+ <nav><a href="#why">The why</a><a href="#engine">The engine</a><a href="#trust">Trust</a><a href="#sibling">LocalDiabetic</a><a href="/study">OpenStudy</a>
  <a class="cta" href="https://opendiabetic.com/try" target="_blank" rel="noopener">Try it</a></nav>
 </div></header>'''
 
