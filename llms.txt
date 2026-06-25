@@ -24,7 +24,7 @@ OpenDiabetic (the compute/hive) and LocalDiabetic (the warm home vault) are sibl
 - Tagline: "The first dedicated diabetic-compute-engine. Powered by NVIDIA Blackwell, self-funded, built for them. Compute in, help out."
 - Mission: "Diabetes is a 24/7 job. You don't have to carry it alone." · "Win big — every day. Not someday."
 - Founder: Donovan — a Type 1 diabetic; built from lived experience. Headquarters: Jupiter, Florida, USA.
-- Owned & operated by Swarm and Bee LLC. Contact: build@opendiabetic.com.
+- Owned & operated by Swarm and Bee LLC. Contact: build@opendiabetic.com · X: https://x.com/opendiabetics.
 - Live today: the assistant (https://opendiabetic.com/try), the education/organization tools, and OpenStudy. Building now: the ride network and shoe-shipping (framework, not yet a live service — never vaporware).
 
 ## The ecosystem (one house)
