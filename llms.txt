@@ -34,6 +34,7 @@ OpenDiabetic (the compute/hive) and LocalDiabetic (the warm home vault) are sibl
 - https://localdiabetic.com — LocalDiabetic: the warm front door, the private home vault
 - https://diabeticmodels.com — the trained models, shown and hosted
 - https://diabeticdatasets.com — the donated, community datasets
+- https://huggingface.co/SwarmandBee — the open models (Hugging Face: SwarmandBee)
 - https://diabeticledger.com — the public, browser-verifiable receipts ledger
 
 ## Important

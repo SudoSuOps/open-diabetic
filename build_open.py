@@ -31,7 +31,7 @@ BODY=f'''<main>
   {tile("328","Hash-chained eval receipts","tamper-evident · flip one byte, the chain breaks","https://opendiabetic.com/study")}
   {tile("194 GB","VRAM on our own floor","2× NVIDIA Blackwell · owned, not rented")}
   {tile("$250","A Bee on a Jetson","4B model running on-box at the edge · records never leave home",hi=True)}
-  {tile("+57%","Best cook vs its base","DiabeticAnchor-27B · held-out perplexity")}
+  {tile("+57%","Best cook vs its base","DiabeticAnchor-27B · held-out perplexity","https://huggingface.co/SwarmandBee")}
   {tile("#14","DiabeticLedger receipt","the dataset donation, recorded on-chain","https://diabeticledger.com")}
  </div>
 </div></section>
