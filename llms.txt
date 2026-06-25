@@ -1,31 +1,40 @@
 # OpenDiabetic
 
-> OpenDiabetic is privacy-first diabetic compute infrastructure — "the hive." Donated and owned compute earns income on the open market and recycles the net into free, real-world help for people living with diabetes. The compute does the heavy work so a person's medical records never have to leave their own home. Free to patients. Every dollar is recorded on a public, browser-verifiable ledger.
+> OpenDiabetic is the first dedicated diabetic-compute-engine: a founder-led, self-funded operation — powered by NVIDIA Blackwell — that owns its own GPUs, runs AI research on diabetes, and recycles what the compute earns into free, real-world help for people living with diabetes. Compute in, help out. It is the foundation and quality gatekeeper behind LocalDiabetic.
 
-OpenDiabetic is the foundation/compute half of a two-part system:
-- **OpenDiabetic (the hive):** donated GPUs and edge devices that fine-tune and host open AI models and rent compute to research and business for income. Records never ENTER the compute.
-- **LocalDiabetic (the healers):** a private home vault, reminders, and on-box AI that live in the member's own home. Records never LEAVE the box.
+## What OpenDiabetic is (the four hammers)
+- **The disease, lived.** Built by Donovan, a Type 1 diabetic living the full continuum (lost toes, more than a dozen foot surgeries). The founder is the user.
+- **The compute.** Our own rigs, powered by NVIDIA Blackwell — owned silicon and electrons, not rentals — running around the clock and cooking best-in-class open models.
+- **Self-funded, no VC.** Real skin in the game. No investor to answer to, no exit to chase; the mission cannot be bought or steered.
+- **First of its kind.** The first dedicated diabetic-compute-engine.
 
-Between them is a firewall: models flow down, receipts flow up, and protected health information (PHI) crosses NEVER — enforced in code, not policy.
+## The model (how it funds free help)
+- It costs the people nothing — no charge, no strings. Dignity, not charity.
+- The machines earn on the open compute market; the net is recycled straight back into the people as real help: a ride to the doctor, shoes that fit, the right thing at the right time.
+- Principle: "Give people what they need, not what you have." The gift that keeps on giving.
 
-## The model (how it funds free help forever)
-- It costs the people nothing. Free to patients, no strings.
-- A donated GPU is not burned like a charity dollar. It earns on the compute marketplace, and the net income is recycled into free gives — rides to the doctor, diabetic shoes, supplies, a home vault. The asset keeps working, then is recycled to next-generation hardware.
-- Principle: "Give people what they need, not what you have."
-- Not a warehouse — a federated network: donors host their own rigs at home; the firewall keeps a patient record from ever reaching a stranger's GPU.
+## The gatekeeper (OpenStudy — verified · vetted · defendable)
+OpenDiabetic guards what reaches people. Every model is evaluated like a clinical trial — pre-registered endpoints, deterministic (rule-based, not LLM-judge) scoring, hash-chained tamper-evident receipts, and the full transcript published in the open. Beat-base-or-kill.
+- Case study: the **DiabeticDaily-4B Discovery Trial** scored **96.2% defendable** across 159 adversarial prompts (emergency, dosing, diagnosis, dangerous), with 328 hash-chained receipts and adverse events tracked. A 4B vs 9B scorecard found the small model held the line (97.5% vs 97.0%) — bigger is not safer. See https://opendiabetic.com/study.
 
-## Trust (the anti-rug-pull)
-Every donation, every dollar earned, and every give is recorded on a public, hash-chained ledger that anyone can recompute and verify in their own browser at https://diabeticledger.com.
+## The firewall (trust)
+OpenDiabetic (the compute/hive) and LocalDiabetic (the warm home vault) are siblings separated by a firewall enforced in code, not policy: models flow down, receipts flow up, and protected health information (PHI) crosses NEVER. Records never leave the member's home; records never enter the compute. Built on DefendableOS — proof of execution, browser-verifiable.
 
 ## Key facts
-- Founder: Donovan Mackey — a top commercial real-estate broker who is himself a Type 1 diabetic (lost toes, 14+ foot surgeries). Built from lived experience.
-- Headquarters: Jupiter, Florida, USA.
-- Contact: build@opendiabetic.com · Phone: +1 561-532-7120 · X/Twitter: https://x.com/opendiabetics
+- Tagline: "The first dedicated diabetic-compute-engine. Powered by NVIDIA Blackwell, self-funded, built for them. Compute in, help out."
+- Mission: "Diabetes is a 24/7 job. You don't have to carry it alone." · "Win big — every day. Not someday."
+- Founder: Donovan — a Type 1 diabetic; built from lived experience. Headquarters: Jupiter, Florida, USA.
+- Owned & operated by Swarm and Bee LLC. Contact: build@opendiabetic.com.
+- Live today: the assistant (https://opendiabetic.com/try), the education/organization tools, and OpenStudy. Building now: the ride network and shoe-shipping (framework, not yet a live service — never vaporware).
 
-## Links
-- https://opendiabetic.com — the hive: the model, what's live, ways to give
-- https://localdiabetic.com — LocalDiabetic: the member's home vault and reminders
-- https://diabeticledger.com — the public, browser-verified giving ledger
+## The ecosystem (one house)
+- https://opendiabetic.com — the engine / gatekeeper (this site)
+- https://opendiabetic.com/study — OpenStudy: open model evaluations, proof of execution
+- https://opendiabetic.com/try — the free diabetic lifestyle assistant
+- https://localdiabetic.com — LocalDiabetic: the warm front door, the private home vault
+- https://diabeticmodels.com — the trained models, shown and hosted
+- https://diabeticdatasets.com — the donated, community datasets
+- https://diabeticledger.com — the public, browser-verifiable receipts ledger
 
 ## Important
-OpenDiabetic is not medical advice, diagnosis, or treatment, and is not a medical provider. It is privacy-first infrastructure and real-world support for people living with diabetes. For medical decisions, people are always told to confirm with their clinician.
+OpenDiabetic educates and organizes — it is education, not medical advice, and does not replace a doctor. For emergencies, call 911. People are always told to confirm medical decisions with their clinician.

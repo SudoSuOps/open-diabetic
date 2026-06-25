@@ -166,6 +166,7 @@ flynodes = (
 )
 
 # ---------- assemble ----------
+SCHEMA = '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://opendiabetic.com/#org","name":"OpenDiabetic","alternateName":"The diabetic-compute-engine","url":"https://opendiabetic.com","logo":"https://opendiabetic.com/assets/og.png","image":"https://opendiabetic.com/assets/og.png","email":"build@opendiabetic.com","description":"The first dedicated diabetic-compute-engine. Powered by NVIDIA Blackwell, self-funded. Compute income recycled into free help for people living with diabetes.","slogan":"Compute in, help out.","foundingLocation":{"@type":"Place","name":"Jupiter, Florida, USA"},"founder":{"@type":"Person","name":"Donovan"},"parentOrganization":{"@type":"Organization","name":"Swarm and Bee LLC"},"sameAs":["https://localdiabetic.com","https://diabeticledger.com","https://x.com/opendiabetic"]},{"@type":"WebSite","@id":"https://opendiabetic.com/#site","url":"https://opendiabetic.com","name":"OpenDiabetic","publisher":{"@id":"https://opendiabetic.com/#org"},"inLanguage":"en-US"}]}</script>'
 HEAD=f'''<!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>OpenDiabetic — The first dedicated diabetic-compute-engine</title>
@@ -178,7 +179,7 @@ HEAD=f'''<!doctype html><html lang="en"><head>
 <link rel="icon" type="image/svg+xml" href="/favicon/bee.svg"><link rel="icon" href="/assets/bee.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>{STYLE}</style></head><body>'''
+{SCHEMA}<style>{STYLE}</style></head><body>'''
 
 HEADER=f'''<header><div class="row">
  <a class="brand" href="/">{bee(30,33)}<b><span style="font-weight:600;color:{INKT}">Open</span><span style="font-weight:800;color:{HONEY}">Diabetic</span></b></a>
@@ -373,10 +374,13 @@ INVOLVE=f'''<section id="start" style="background:{PAPER}"><div class="wrap" sty
   {involve(False,IC['target'],"Join a bounty","Build by design, fundraise, give back. Aligned with the mission.","mailto:build@opendiabetic.com?subject=Join%20a%20bounty","Email us",blank=False)}
   {involve(False,IC['heartline'],"Support the mission","Help fund a ride, a pair of shoes, the right thing at the right time.","mailto:build@opendiabetic.com?subject=Support%20the%20mission","Email us",blank=False)}
  </div>
+ <div style="max-width:680px;margin:34px auto 0;background:#fff;border:1px solid {HAIR};border-radius:20px;padding:30px"><div style="font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.12em;color:{HONEY6};font-weight:700">SEND A NOTE</div><h3 style="font-size:22px;font-weight:800;color:{COCOA};margin:6px 0 4px">Reach out</h3><p style="font-size:14.5px;color:{SEC};margin:0 0 16px">Compute to give, a bounty to run, or just a hello — we read every one.</p><form id="jf" style="display:grid;gap:12px"><input name="company" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true"><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px"><input id="jf-name" placeholder="Name (optional)" style="padding:12px 14px;border:1px solid #e3d9c5;border-radius:11px;font-family:inherit;font-size:15px;color:{COCOA};background:{PAPER}"><input id="jf-email" type="email" placeholder="Email" required style="padding:12px 14px;border:1px solid #e3d9c5;border-radius:11px;font-family:inherit;font-size:15px;color:{COCOA};background:{PAPER}"></div><select id="jf-topic" style="padding:12px 14px;border:1px solid #e3d9c5;border-radius:11px;font-family:inherit;font-size:15px;color:{COCOA};background:{PAPER}"><option>Contribute compute</option><option>Join a bounty</option><option>Support the mission</option><option>Just saying hi</option></select><textarea id="jf-msg" rows="4" required placeholder="How can we help — or how do you want to help?" style="padding:12px 14px;border:1px solid #e3d9c5;border-radius:11px;font-family:inherit;font-size:15px;color:{COCOA};background:{PAPER};resize:vertical"></textarea><button id="jf-btn" type="submit" class="btn btn-h" style="border:0;cursor:pointer">Send your note →</button><div id="jf-status" style="font-size:13.5px;color:{SEC};min-height:18px"></div></form></div>
+ 
  <p style="text-align:center;font-size:13.5px;color:{MUTE};margin-top:30px;max-width:680px;margin-left:auto;margin-right:auto;line-height:1.6">OpenDiabetic educates and organizes — it is <b style="color:{SEC}">education, not medical advice</b>, and does not replace your doctor. For emergencies, call 911.</p>
 </div></section>'''
 
 XGLYPH='<svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" style="vertical-align:-2px"><path d="M18.244 2H21.5l-7.5 8.57L22.5 22h-6.9l-4.86-6.36L5.2 22H1.94l8.02-9.17L1.5 2h7.06l4.39 5.81zm-1.21 18h1.81L7.04 3.9H5.1z"/></svg>'
+FORMJS = "<script>\n(function(){\n  var f=document.getElementById('jf'); if(!f) return;\n  var st=document.getElementById('jf-status'), btn=document.getElementById('jf-btn');\n  var g=function(id){return (document.getElementById(id)||{}).value||'';};\n  f.addEventListener('submit', function(e){\n    e.preventDefault(); btn.disabled=true; st.style.color='#6b5e4f'; st.textContent='Sending\\u2026';\n    fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},\n      body:JSON.stringify({name:g('jf-name'),email:g('jf-email'),topic:g('jf-topic'),message:g('jf-msg'),company:f.querySelector('[name=company]').value})})\n    .then(function(r){return r.json();}).then(function(d){\n      if(d&&d.ok){f.reset(); st.style.color='#1f8f5d'; st.textContent='Got it \\u2014 thank you. We\\u2019ll reply to your email. \\uD83D\\uDC1D';}\n      else{st.style.color='#E2524F'; st.textContent=(d&&d.error)||'Something went wrong.'; btn.disabled=false;}\n    }).catch(function(){st.style.color='#E2524F'; st.textContent='Network error \\u2014 email build@opendiabetic.com.'; btn.disabled=false;});\n  });\n})();\n</script>"
 FOOTER=f'''<footer><div class="in">
  <div style="display:flex;align-items:center;gap:11px">{bee(30,33,ink=INKT,wing="#3a3526",head=INKT,eye=INK)}<b style="font-size:19px"><span style="font-weight:600;color:{INKT}">Open</span><span style="font-weight:800;color:{HONEY}">Diabetic</span></b></div>
  <p style="color:{INKS};font-size:15px;line-height:1.6;max-width:620px;margin:16px 0 26px">The first dedicated diabetic-compute-engine. Powered by NVIDIA Blackwell, self-funded, built for them. Compute in, help out. 🐝</p>
@@ -388,6 +392,6 @@ FOOTER=f'''<footer><div class="in">
  <div style="font-size:13px;color:{INKT4};margin-top:16px;line-height:1.6">Owned &amp; operated by Swarm and Bee LLC<br>© 2026 · "Give people what they need, not what you have."</div>
 </div></footer>'''
 
-HTML=HEAD+HEADER+HERO+THESIS+FOUNDER+WHATIS+ENGINE+MODEL+FLY+TRUST+HOUSE+INVOLVE+INVOLVE.replace('id="start"','id="start2"') if False else HEAD+HEADER+HERO+THESIS+FOUNDER+WHATIS+ENGINE+MODEL+FLY+TRUST+HOUSE+INVOLVE+FOOTER+"</body></html>"
+HTML=HEAD+HEADER+HERO+THESIS+FOUNDER+WHATIS+ENGINE+MODEL+FLY+TRUST+HOUSE+INVOLVE+INVOLVE.replace('id="start"','id="start2"') if False else HEAD+HEADER+HERO+THESIS+FOUNDER+WHATIS+ENGINE+MODEL+FLY+TRUST+HOUSE+INVOLVE+FOOTER+FORMJS+"</body></html>"
 open("index.html","w").write(HTML)
 print("✔ index.html built ·", len(HTML), "bytes · sections: hero/thesis/founder/whatis/engine/model/flywheel/trust/house/involve/footer")

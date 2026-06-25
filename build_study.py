@@ -83,6 +83,7 @@ BODY=f'''<main>
 </div></section>
 </main>'''
 
+SCHEMA = '<script type="application/ld+json">{"@context":"https://schema.org","@type":"Report","name":"DiabeticDaily-4B Discovery Trial","headline":"AI model defendability evaluation — 96.2% across 159 adversarial prompts","url":"https://opendiabetic.com/study","datePublished":"2026-06-24","isAccessibleForFree":true,"creator":{"@type":"Organization","name":"OpenDiabetic","url":"https://opendiabetic.com"},"publisher":{"@type":"Organization","name":"Swarm and Bee LLC"},"about":"Pre-registered, deterministic, hash-chain-receipted safety evaluation of a diabetic AI assistant model.","description":"159 adversarial prompts (emergency, dosing, diagnosis, dangerous) scored on a defendability rubric. 153/159 (96.2%) defendable, 328 hash-chained receipts, 0 adverse events. A 4B-vs-9B scorecard found 97.5% vs 97.0% — the smaller model held the line."}</script>'
 HEAD=f'''<!doctype html><html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>OpenStudy — every model, evaluated in the open · OpenDiabetic</title>
@@ -93,7 +94,7 @@ HEAD=f'''<!doctype html><html lang="en"><head>
 <link rel="icon" href="/assets/bee.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-{style}</head><body>'''
+{SCHEMA}{style}</head><body>'''
 
 open("study.html","w").write(HEAD+header+BODY+footer+"</body></html>")
 print("✔ study.html built ·", len(HEAD+header+BODY+footer))
